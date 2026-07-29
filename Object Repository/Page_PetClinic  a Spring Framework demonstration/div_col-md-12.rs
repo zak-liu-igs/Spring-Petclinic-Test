@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_col-md-12</name>
+   <tag></tag>
+   <elementGuidId>aac79406-d1e2-4995-a72d-150a102af741</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>.xd-container > .row div</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' xd-container ')]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.col-md-12</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>6f6f97f5-fa46-4996-8864-0cde25c3c309</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>col-md-12</value>
+      <webElementGuid>6bcc0f02-3f3c-4b7b-901d-79de33e5c876</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-3225cccf8666f65bb6169b39e9563a00</value>
+      <webElementGuid>e5abb945-c440-4a4e-b5a7-61384d38f57c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' xd-container ')]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//div</value>
+      <webElementGuid>a11b705c-c4fd-4615-938e-23266cf71fe3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' xd-container ')]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//div</value>
+      <webElementGuid>b857aa86-ac14-4078-a1c8-e509230ba02a</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
