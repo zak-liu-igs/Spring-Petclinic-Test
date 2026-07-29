@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, search by last name, and verify the newly created owner appears in search results.</description>
+   <name>27_Verify Newly Created Owner Appears In Search</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>41ee22a6-b72f-47d9-bc18-029aa5a6cf28</testCaseGuid>
+</TestCaseEntity>

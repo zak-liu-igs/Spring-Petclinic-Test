@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
+   <description>Pet birth date input field on the Add/Edit Pet form.</description>
    <name>input_Birth Date</name>
    <tag></tag>
    <elementGuidId>0e62a167-4ae5-400d-a15f-541961672bdd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#birthDate</value>
+         <key>XPATH</key>
+         <value>//input[@id='birthDate']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id = 'birthDate']</value>
+         <key>CSS</key>
+         <value>#birthDate</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

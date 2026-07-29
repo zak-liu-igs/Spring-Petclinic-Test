@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the Spring Petclinic home navigation menu is visible.</description>
+   <name>17_Verify Home Navigation Menu</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>48531a3b-595e-4903-ad6a-72641afdb08b</testCaseGuid>
+</TestCaseEntity>

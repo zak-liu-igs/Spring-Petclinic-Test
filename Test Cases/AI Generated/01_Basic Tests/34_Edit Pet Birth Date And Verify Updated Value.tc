@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, edit the pet birth date, and verify the updated birth date appears on the owner details page.</description>
+   <name>34_Edit Pet Birth Date And Verify Updated Value</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>52cdff36-34e3-4f95-9f72-5f80aec94a84</testCaseGuid>
+</TestCaseEntity>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
+   <description>Pet type dropdown on the Add/Edit Pet form.</description>
    <name>select_Type</name>
    <tag></tag>
    <elementGuidId>9add31be-a783-41ea-8008-407b28c25331</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#type</value>
+         <key>XPATH</key>
+         <value>//select[@id='type']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id = 'type']</value>
+         <key>CSS</key>
+         <value>#type</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

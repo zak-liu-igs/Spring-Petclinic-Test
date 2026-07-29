@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the Spring Petclinic home page title.</description>
+   <name>16_Verify Home Page Title</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f2477184-81fb-4b9e-9d0a-3ab6403e4f18</testCaseGuid>
+</TestCaseEntity>

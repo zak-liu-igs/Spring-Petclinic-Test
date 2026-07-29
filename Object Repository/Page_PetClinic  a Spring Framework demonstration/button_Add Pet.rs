@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
+   <description>Add Pet submit button on the Add Pet form.</description>
    <name>button_Add Pet</name>
    <tag></tag>
    <elementGuidId>f1242433-5e41-4782-ba14-9d4b0d6dc974</elementGuidId>
@@ -10,12 +10,12 @@
          <value>//*[@type = 'submit' and (text() = 'Add Pet' or . = 'Add Pet')]</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>.btn</value>
+         <key>XPATH</key>
+         <value>//button[@type='submit' and normalize-space()='Add Pet']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' btn ')]</value>
+         <key>CSS</key>
+         <value>.btn</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

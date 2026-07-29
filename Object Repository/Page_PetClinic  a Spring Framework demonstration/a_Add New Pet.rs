@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
+   <description>Add New Pet link for the current owner details page.</description>
    <name>a_Add New Pet</name>
    <tag></tag>
    <elementGuidId>72b07e6b-aee6-4494-ad7f-8ba72d1cfba0</elementGuidId>
@@ -10,12 +10,12 @@
          <value>//*[@href = '11/pets/new' and (text() = 'Add New Pet' or . = 'Add New Pet')]</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>.btn:nth-child(4)</value>
+         <key>XPATH</key>
+         <value>//a[normalize-space()='Add New Pet']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' btn ') and (position() = 4)]</value>
+         <key>CSS</key>
+         <value>.btn:nth-child(4)</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

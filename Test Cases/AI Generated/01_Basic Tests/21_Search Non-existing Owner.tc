@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search for a non-existing owner and verify the not found validation message is displayed.</description>
+   <name>21_Search Non-existing Owner</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>53369a18-9dd4-4438-9846-c8c57f275df9</testCaseGuid>
+</TestCaseEntity>

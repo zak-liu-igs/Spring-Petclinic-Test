@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, attempt to add a pet without a birth date, and verify validation is displayed.</description>
+   <name>37_Add Pet With Missing Birth Date Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>45d4434f-6770-43d8-860d-e251e45a260e</testCaseGuid>
+</TestCaseEntity>

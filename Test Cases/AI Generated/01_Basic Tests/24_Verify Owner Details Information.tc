@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search for an existing owner, open the Test Davis result, and verify owner details and pet information are displayed.</description>
+   <name>24_Verify Owner Details Information</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ec1b339c-b11e-468d-b246-8178500f26be</testCaseGuid>
+</TestCaseEntity>

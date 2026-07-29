@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the Find Owners page loads from home navigation.</description>
+   <name>18_Verify Owners Page Loads</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>70a89286-1667-49de-af8e-059b717eae9c</testCaseGuid>
+</TestCaseEntity>
