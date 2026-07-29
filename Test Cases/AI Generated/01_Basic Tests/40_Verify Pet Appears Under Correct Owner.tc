@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, search for that owner, and verify the pet appears under the correct owner details.</description>
+   <name>40_Verify Pet Appears Under Correct Owner</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a7d312df-d17b-4697-9e97-7658ccbe1e40</testCaseGuid>
+</TestCaseEntity>
