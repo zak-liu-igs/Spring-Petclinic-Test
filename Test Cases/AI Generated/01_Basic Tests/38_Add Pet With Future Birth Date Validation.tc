@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create a unique owner, attempt to add a pet with a future birth date, and verify validation is displayed.</description>
+   <description>Create a unique owner, add a pet with a future birth date, and verify the actual Spring Petclinic behavior.</description>
    <name>38_Add Pet With Future Birth Date Validation</name>
    <tag>GenAI</tag>
    <comment></comment>

@@ -256,4 +256,39 @@
       <testCaseId>Test Cases/AI Generated/01_Basic Tests/35_Edit Pet Type And Verify Updated Value</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>e573ffb6-6a01-4fc0-9d7d-d59933c56ae9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/36_Add Pet With Empty Name Validation</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>11d69e59-2ba5-4e7b-936a-3d71dad9ce62</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/37_Add Pet With Missing Birth Date Validation</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3bfc6d55-8d59-4145-91b5-824fcc099c8c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/38_Add Pet With Future Birth Date Validation</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7abbf678-ead3-4f89-a493-6e45e712f957</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/39_Add Pet Without Selecting Pet Type</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>50597117-403d-42a2-bcce-60a9d1027fa7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/40_Verify Pet Appears Under Correct Owner</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>
