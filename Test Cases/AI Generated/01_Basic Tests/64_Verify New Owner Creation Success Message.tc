@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and verify the exact success message and all saved owner information.</description>
+   <name>64_Verify New Owner Creation Success Message</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d8923e70-5f41-4a6c-9b83-17ed205ca649</testCaseGuid>
+</TestCaseEntity>

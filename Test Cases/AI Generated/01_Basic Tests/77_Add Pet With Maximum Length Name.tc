@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, add a pet whose name is exactly 30 characters, and verify the complete name is saved.</description>
+   <name>77_Add Pet With Maximum Length Name</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>39514c2f-dda8-4ac4-8a36-9b72d7d6f20e</testCaseGuid>
+</TestCaseEntity>

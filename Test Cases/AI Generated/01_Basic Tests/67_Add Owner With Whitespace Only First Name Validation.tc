@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an otherwise valid owner with a whitespace-only first name and verify the field-scoped validation.</description>
+   <name>67_Add Owner With Whitespace Only First Name Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>41bf8d25-6e93-47c0-a154-f9027b38de61</testCaseGuid>
+</TestCaseEntity>

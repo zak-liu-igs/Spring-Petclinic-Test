@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, add a pet with a Unicode name, and verify the exact name is preserved on the owner details page.</description>
+   <name>76_Add Pet With Unicode Name</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>86fe90c6-0f37-492e-bdcb-c65da7fae0b0</testCaseGuid>
+</TestCaseEntity>

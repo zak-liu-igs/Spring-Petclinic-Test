@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two owners sharing a unique prefix, add two pets to one owner, and verify the sorted Pets search-result cell.</description>
+   <name>71_Verify Owner Pets Display In Search Results</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2e7c6049-8ab1-43d6-b952-1f76ca3804ed</testCaseGuid>
+</TestCaseEntity>

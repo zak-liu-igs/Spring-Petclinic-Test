@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add three pets in non-alphabetical order and verify the owner details page displays their names in ascending alphabetical order.</description>
+   <name>83_Verify Pets Are Displayed In Alphabetical Order</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f8c06df0-f5dc-465d-873c-35abb7a9e5e4</testCaseGuid>
+</TestCaseEntity>

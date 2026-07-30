@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add one valid visit, and verify the pet visit-history count increases by exactly one.</description>
+   <name>88_Verify Visit History Count Increases After Add</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c29b83a1-c930-42fc-b6de-eba36a9571d9</testCaseGuid>
+</TestCaseEntity>

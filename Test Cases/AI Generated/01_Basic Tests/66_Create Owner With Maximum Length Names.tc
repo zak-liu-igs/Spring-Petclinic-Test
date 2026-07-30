@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner whose first and last names are exactly 30 characters and verify they are saved intact.</description>
+   <name>66_Create Owner With Maximum Length Names</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e3057b64-9c18-42fa-87d1-5b6ea4903c28</testCaseGuid>
+</TestCaseEntity>

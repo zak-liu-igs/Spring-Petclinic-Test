@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two pets for one owner, edit the second pet to use the first pet's name, and verify duplicate-name validation preserves both original records.</description>
+   <name>86_Edit Pet Name To Existing Name Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e4f66cf4-7e01-47f0-be93-46ff35edee37</testCaseGuid>
+</TestCaseEntity>

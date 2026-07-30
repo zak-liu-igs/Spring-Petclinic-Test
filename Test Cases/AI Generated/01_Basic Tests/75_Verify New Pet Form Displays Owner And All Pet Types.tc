@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, open the New Pet form, and verify the owner, fields, submit button, and all six pet types are displayed.</description>
+   <name>75_Verify New Pet Form Displays Owner And All Pet Types</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>985c1166-7fa2-496d-9370-b59da7a0d2a3</testCaseGuid>
+</TestCaseEntity>

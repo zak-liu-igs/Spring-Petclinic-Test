@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate to the second Veterinarians page and verify its URL, veterinarian row, and specialty content.</description>
+   <name>93_Verify Second Veterinarians Page Contents</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>668a9da0-497a-43cc-bcbf-d9bc1fdbcb4c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add two visits out of chronological order, and verify visit history is ordered by date.</description>
+   <name>89_Verify Visit History Is Ordered By Date</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>10bcb2ba-6e71-4ea8-b954-8a65ff237e66</testCaseGuid>
+</TestCaseEntity>

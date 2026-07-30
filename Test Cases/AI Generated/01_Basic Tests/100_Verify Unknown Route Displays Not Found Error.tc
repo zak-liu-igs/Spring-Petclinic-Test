@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open a unique unknown route and verify the application displays its not-found error details.</description>
+   <name>100_Verify Unknown Route Displays Not Found Error</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b47d13e7-f618-4a87-b315-db0a85c4c8fd</testCaseGuid>
+</TestCaseEntity>

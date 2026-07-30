@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a pet, update only its type without changing its name, and verify the update succeeds while the name and birth date remain unchanged.</description>
+   <name>85_Update Pet Without Changing Name</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e54e6ef7-45e8-4932-a8c8-54a186508fa9</testCaseGuid>
+</TestCaseEntity>
