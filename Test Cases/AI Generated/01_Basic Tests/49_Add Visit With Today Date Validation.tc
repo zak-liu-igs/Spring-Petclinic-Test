@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, submit a visit dated today, and verify the future-date validation on the New Visit form.</description>
+   <name>49_Add Visit With Today Date Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>67d355d6-86b2-498a-94e7-ddf03d455c0d</testCaseGuid>
+</TestCaseEntity>

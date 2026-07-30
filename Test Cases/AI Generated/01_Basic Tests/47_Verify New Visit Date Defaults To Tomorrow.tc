@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, open the New Visit form, and verify the visit date defaults to tomorrow.</description>
+   <name>47_Verify New Visit Date Defaults To Tomorrow</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3a1dc546-b81a-4a31-a7ad-18d880d2dc90</testCaseGuid>
+</TestCaseEntity>

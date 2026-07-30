@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add a visit, refresh Owner Details, and verify the exact visit date and description persist.</description>
+   <name>59_Verify Visit Persists After Page Refresh</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5d9b7a3c-2e41-4f68-b059-9ef12ca67483</testCaseGuid>
+</TestCaseEntity>
