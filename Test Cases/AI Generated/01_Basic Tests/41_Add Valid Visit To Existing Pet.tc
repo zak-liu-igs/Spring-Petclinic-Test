@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add a valid visit to the existing pet, and verify the visit appears on the owner details page.</description>
+   <name>41_Add Valid Visit To Existing Pet</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cc13ffce-a9f0-4257-9613-5d06ed671094</testCaseGuid>
+</TestCaseEntity>

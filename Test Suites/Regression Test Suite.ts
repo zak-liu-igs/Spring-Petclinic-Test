@@ -256,4 +256,39 @@
       <testCaseId>Test Cases/AI Generated/01_Basic Tests/35_Edit Pet Type And Verify Updated Value</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>3efbd8f6-315a-4d8d-9e18-097b7ae515c6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/41_Add Valid Visit To Existing Pet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3cea5144-535f-48f9-bdf5-4175c78cc8be</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/42_Add Visit With Empty Description Validation</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>78bcba59-d900-4dc8-9d9e-439abe06b8c4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/43_Add Visit With Special Characters In Description</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a9ab6645-19d9-447b-bd5e-67557e984ad3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/44_Verify Added Visit Appears In Visit History</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cdb6b9db-b4ef-4f87-886c-1011330de0e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/AI Generated/01_Basic Tests/45_Add Multiple Visits To The Same Pet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>
