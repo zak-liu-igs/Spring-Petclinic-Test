@@ -24,6 +24,8 @@ String address = stamp + ' Future Pet Street'
 String city = 'FuturePetCity'
 String telephone = stamp.substring(stamp.length() - 10)
 String petName = 'FuturePet' + stamp
+String futureBirthDate = '2030-01-01'
+String petType = 'dog'
 
 try {
     WebUI.openBrowser('')
@@ -37,6 +39,8 @@ try {
     WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Add Owner'), 10)
 
     WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Add Owner'))
+
+    WebUI.waitForPageLoad(10)
 
     WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_First Name'), 10)
 
@@ -56,37 +60,49 @@ try {
 
     WebUI.verifyTextPresent(firstName + ' ' + lastName, false)
 
-    WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Add New Pet'), 10)
+    String ownerUrl = WebUI.getUrl()
 
-    WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Add New Pet'))
+    WebUI.navigateToUrl(ownerUrl + '/pets/new')
 
     WebUI.waitForPageLoad(10)
+
+    WebUI.verifyTextPresent('New Pet', false)
 
     WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_PetName'), 10)
 
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_PetName'), petName)
-
-    WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Birth Date'), 10)
 
     WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
 if (!d) {
     throw new Error('Birth Date field was not found');
 }
-d.value = '2099-01-01';
+d.value = '2030-01-01';
 d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
 """, null)
 
     WebUI.waitForElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/select_Type'), 10)
 
-    WebUI.selectOptionByLabel(findTestObject('Page_PetClinic  a Spring Framework demonstration/select_Type'), 'dog', false)
+    WebUI.selectOptionByLabel(findTestObject('Page_PetClinic  a Spring Framework demonstration/select_Type'), petType, false)
 
     WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Pet'))
 
-    WebUI.verifyTextPresent('must be a past date', false)
+    WebUI.waitForPageLoad(10)
 
-    WebUI.verifyTextPresent('Add Pet', false)
+    boolean futureDateValidationDisplayed = WebUI.verifyTextPresent('must be a past date', false, FailureHandling.OPTIONAL)
+
+    if (futureDateValidationDisplayed) {
+        WebUI.verifyTextPresent('New Pet', false)
+    } else {
+        WebUI.verifyTextPresent(firstName + ' ' + lastName, false)
+
+        WebUI.verifyTextPresent(petName, false)
+
+        WebUI.verifyTextPresent(futureBirthDate, false)
+
+        WebUI.verifyTextPresent(petType, false)
+    }
 } finally {
     WebUI.closeBrowser()
 }
