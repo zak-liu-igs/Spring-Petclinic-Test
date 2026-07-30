@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search for a timestamp-unique nonexistent owner and verify the not-found validation feedback.</description>
+   <name>106_Verify No Owner Search Result Validation</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3909373d-3b8d-41c9-9d8b-84b13a0e194e</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that submitting an empty owner search displays the complete owners list.</description>
+   <name>102_Verify Empty Owner Search Returns Owner List</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>743f4058-ef57-40c8-a959-e90e3901f70a</testCaseGuid>
+</TestCaseEntity>

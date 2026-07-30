@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify a nonblank pet name with leading and trailing spaces is accepted and visibly displayed.</description>
+   <name>136_Add Pet Name With Leading And Trailing Spaces</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3eeed49e-38bb-4b7c-96bd-4a4f100d0136</testCaseGuid>
+</TestCaseEntity>

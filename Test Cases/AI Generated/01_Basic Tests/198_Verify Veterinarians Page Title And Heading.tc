@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the Veterinarians page displays the PetClinic window title and Veterinarians heading.</description>
+   <name>198_Verify Veterinarians Page Title And Heading</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4318dd02-4153-42e5-ab57-398e63aa6449</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify labels and HTML input types for every field on the Add Owner form.</description>
+   <name>109_Verify Add Owner Form Labels And Input Types</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0ac1fba0-2b85-40f1-a609-4954403eb377</testCaseGuid>
+</TestCaseEntity>

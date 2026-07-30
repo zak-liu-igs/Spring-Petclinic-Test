@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner containing Unicode characters and verify every saved value exactly.</description>
+   <name>065_Create Owner With Unicode Characters</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6a1d4f92-c730-48eb-a516-d28934fe607c</testCaseGuid>
+</TestCaseEntity>

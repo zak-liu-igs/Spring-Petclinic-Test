@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the seeded pet visit-history table on owner details has Visit Date and Description headers.</description>
+   <name>176_Verify Owner Details Visit Table Headers</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>279b7434-3f44-4f7b-909b-5089b1672180</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add a visit whose description contains digits only and verify the exact value in visit history.</description>
+   <name>171_Add Visit With Numeric Description</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1e8dddbd-9a0c-4273-adab-4372693c8978</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, add a pet using default available pet type selection, and verify the pet can be saved.</description>
+   <name>039_Add Pet Without Selecting Pet Type</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2e4f03a1-936f-4b32-8012-4de0161ce143</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the five seeded veterinarian names appear in their expected order on page one.</description>
+   <name>187_Verify First Veterinarians Page Name Order</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e63f4c12-61f6-4c86-a0f4-2f6ad5b31ee5</testCaseGuid>
+</TestCaseEntity>

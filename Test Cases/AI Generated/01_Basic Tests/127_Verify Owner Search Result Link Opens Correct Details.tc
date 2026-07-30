@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two matching owners, select one from results, and verify that owner's details open.</description>
+   <name>127_Verify Owner Search Result Link Opens Correct Details</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cd5117f5-73c5-4881-9cc9-fcc6e8ec2377</testCaseGuid>
+</TestCaseEntity>

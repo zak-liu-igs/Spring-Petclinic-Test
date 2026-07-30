@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add two visits to the same pet, and verify both visits appear in its visit history.</description>
+   <name>045_Add Multiple Visits To The Same Pet</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9e41897e-9377-45e5-8bd9-72b26422ffe3</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner with a ten-digit telephone beginning with zero and verify that the zero is preserved.</description>
+   <name>119_Create Owner With Leading Zero Telephone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e4e11682-f0a9-43a0-b7f8-61eb8f3621f0</testCaseGuid>
+</TestCaseEntity>

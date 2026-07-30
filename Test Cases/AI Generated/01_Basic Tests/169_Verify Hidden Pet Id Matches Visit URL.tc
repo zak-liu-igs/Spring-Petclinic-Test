@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the hidden petId submitted by the visit form matches the pet identifier in the URL.</description>
+   <name>169_Verify Hidden Pet Id Matches Visit URL</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>47809949-1e1b-45c9-841c-54b70ad18004</testCaseGuid>
+</TestCaseEntity>

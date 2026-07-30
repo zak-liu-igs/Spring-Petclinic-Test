@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the seeded new-visit form contains exactly one hidden petId field with the routed pet identifier.</description>
+   <name>184_Verify Visit Form Contains One Hidden Pet Id</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3c2b81c5-4c5b-4e01-9044-3ac8669af6c0</testCaseGuid>
+</TestCaseEntity>

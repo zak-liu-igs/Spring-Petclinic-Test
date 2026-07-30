@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open the Veterinarians page and verify a veterinarian without specialties displays none.</description>
+   <name>091_Verify Veterinarian Without Specialty Displays None</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3d69011a-8acc-4c31-a361-c0ed65499e69</testCaseGuid>
+</TestCaseEntity>

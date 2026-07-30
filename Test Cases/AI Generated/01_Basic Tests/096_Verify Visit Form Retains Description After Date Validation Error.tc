@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, submit today's visit date, and verify the validation form retains its description.</description>
+   <name>096_Verify Visit Form Retains Description After Date Validation Error</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0e487834-f48b-4778-9694-dd22a43c7be4</testCaseGuid>
+</TestCaseEntity>

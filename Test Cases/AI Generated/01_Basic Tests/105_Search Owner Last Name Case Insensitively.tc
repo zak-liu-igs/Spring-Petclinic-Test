@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify that an exact last-name search is case insensitive.</description>
+   <name>105_Search Owner Last Name Case Insensitively</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>55496927-fee2-44dc-a82f-c23595a8384f</testCaseGuid>
+</TestCaseEntity>

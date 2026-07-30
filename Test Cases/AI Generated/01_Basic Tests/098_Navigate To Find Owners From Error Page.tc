@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trigger the application error page, navigate to Find Owners from its menu, and verify the owner-search page loads.</description>
+   <name>098_Navigate To Find Owners From Error Page</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0cd6f93b-6d39-4221-9df0-5823baabe9b6</testCaseGuid>
+</TestCaseEntity>

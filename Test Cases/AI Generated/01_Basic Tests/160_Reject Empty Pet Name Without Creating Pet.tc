@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit a pet with an empty name and verify validation prevents creation.</description>
+   <name>160_Reject Empty Pet Name Without Creating Pet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b0a42d65-8551-49b6-b639-6af8897b0160</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a new owner with unique valid data and verify the owner details are saved.</description>
+   <name>026_Create Owner With Unique Valid Data</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c2a140a-9c98-4bff-9cbd-cd9417647dcf</testCaseGuid>
+</TestCaseEntity>

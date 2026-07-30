@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>005_Search Existing Owner Test</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>08f708da-10c4-455b-96ff-9539201186f9</testCaseGuid>
+</TestCaseEntity>

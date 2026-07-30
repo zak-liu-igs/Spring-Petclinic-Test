@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, edit the telephone number, and verify the updated telephone number is displayed.</description>
+   <name>029_Edit Owner Telephone Number</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b6dfaa41-febf-4548-8146-9e4c3228df60</testCaseGuid>
+</TestCaseEntity>

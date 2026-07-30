@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add two pets sharing a birth date but having different types and verify both details.</description>
+   <name>164_Add Same Birth Date Pets With Different Types</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bac09586-b994-44fc-bfaa-e125f51e0164</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, attempt to add a visit with an empty description, and verify validation is displayed.</description>
+   <name>042_Add Visit With Empty Description Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e85d81cc-7caf-4ea8-9ab7-52eaa1f954ee</testCaseGuid>
+</TestCaseEntity>

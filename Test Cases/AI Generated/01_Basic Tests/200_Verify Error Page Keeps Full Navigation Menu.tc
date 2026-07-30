@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the custom error page retains all four primary navigation destinations.</description>
+   <name>200_Verify Error Page Keeps Full Navigation Menu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e852e028-4c02-464d-ba59-941e3a47234c</testCaseGuid>
+</TestCaseEntity>

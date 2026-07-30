@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an eleven-digit owner telephone and verify the ten-digit upper-bound validation.</description>
+   <name>117_Verify Owner Form Rejects Telephone Longer Than Ten Digits</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>16634c48-b7f7-4ff3-b8a7-38ff702d289d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify each noncurrent veterinarian page-number link targets the corresponding page URL.</description>
+   <name>196_Verify Veterinarian Page Number Link Targets</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b22d82f0-c4a6-4bf2-b2a2-a97aea0cdb3e</testCaseGuid>
+</TestCaseEntity>

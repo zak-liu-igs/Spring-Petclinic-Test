@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open the Add Owner form and verify all owner inputs and the Add Owner submit button.</description>
+   <name>063_Verify Add Owner Form Fields And Submit Button</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>27c5f841-ae36-4d79-b204-68f3a1ce9507</testCaseGuid>
+</TestCaseEntity>

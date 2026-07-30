@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit a non-future visit date and verify validation remains on the same New Visit URL.</description>
+   <name>181_Verify Invalid Date Submission Stays On Visit URL</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2b5a01fc-c349-4529-86c8-3374fce0c01c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two unique owners, add the same pet name to both owners, and verify both owner-specific records are saved.</description>
+   <name>081_Add Same Pet Name To Different Owners</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1bda2310-452d-43d0-805e-70ce14d05a1a</testCaseGuid>
+</TestCaseEntity>

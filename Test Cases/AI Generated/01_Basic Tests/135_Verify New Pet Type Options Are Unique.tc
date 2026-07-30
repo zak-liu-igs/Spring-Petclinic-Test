@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify every supported pet type appears exactly once on the new-pet form.</description>
+   <name>135_Verify New Pet Type Options Are Unique</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7dc8b4b7-96db-4448-875d-63fcfd8d0135</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add two visits on one explicit future date and verify both distinct descriptions are stored for that date.</description>
+   <name>174_Add Two Visits On Same Date With Different Descriptions</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cd4ca221-846e-465d-be18-e8e4fbe02611</testCaseGuid>
+</TestCaseEntity>

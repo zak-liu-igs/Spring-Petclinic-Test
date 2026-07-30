@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Rename an existing pet with an apostrophe and hyphen and verify exact persistence.</description>
+   <name>154_Rename Pet With Apostrophe And Hyphen</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>09ba267c-c4f4-43b0-b707-ad2315810154</testCaseGuid>
+</TestCaseEntity>

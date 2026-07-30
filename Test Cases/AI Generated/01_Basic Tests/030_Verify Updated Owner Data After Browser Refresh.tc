@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, update owner data, refresh the browser, and verify updated owner data remains displayed.</description>
+   <name>030_Verify Updated Owner Data After Browser Refresh</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b529ca91-f807-4b37-ab1c-aff6f1b6cc7e</testCaseGuid>
+</TestCaseEntity>

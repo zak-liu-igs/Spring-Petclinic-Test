@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Edit one of two pets and verify its sibling pet remains unchanged.</description>
+   <name>165_Edit One Pet Without Changing Sibling Pet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>90b50af9-398f-4ab2-b85a-839c50ca0165</testCaseGuid>
+</TestCaseEntity>

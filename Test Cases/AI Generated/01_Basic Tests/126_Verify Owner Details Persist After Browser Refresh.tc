@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner, refresh the details page, and verify all owner values remain visible.</description>
+   <name>126_Verify Owner Details Persist After Browser Refresh</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7c90f280-ae4b-4660-8fef-d22a90c5d76b</testCaseGuid>
+</TestCaseEntity>

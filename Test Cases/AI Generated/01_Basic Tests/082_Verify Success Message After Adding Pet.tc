@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add a valid pet to a unique owner and verify the exact creation success message and saved pet row.</description>
+   <name>082_Verify Success Message After Adding Pet</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>38e5e95a-b071-43b3-a18e-58d22450b872</testCaseGuid>
+</TestCaseEntity>

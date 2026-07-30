@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>012_Edit Pet Test</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0b729ddf-14e2-429b-8a1e-8cdbf4b5e2da</testCaseGuid>
+</TestCaseEntity>

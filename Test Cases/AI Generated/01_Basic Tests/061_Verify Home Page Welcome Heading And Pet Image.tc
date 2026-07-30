@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open the home page and verify the Welcome heading and Petclinic pet image.</description>
+   <name>061_Verify Home Page Welcome Heading And Pet Image</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0f7a6c91-38d2-4e5b-9a47-2c801b6de154</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two owners with a unique shared prefix and verify partial-last-name search returns both.</description>
+   <name>104_Search Owners By Partial Last Name</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>105a6240-2133-428f-b7d1-8de753a48004</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an empty visit description and verify its accessible remove-feedback icon is displayed.</description>
+   <name>179_Verify Description Validation Error Icon</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d0dd4395-66d9-4a37-84d2-76bd429513ae</testCaseGuid>
+</TestCaseEntity>

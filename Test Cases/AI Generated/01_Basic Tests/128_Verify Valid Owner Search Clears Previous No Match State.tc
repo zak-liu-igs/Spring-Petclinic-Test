@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Perform a failed search, correct it to a valid owner, and verify navigation to owner details.</description>
+   <name>128_Verify Valid Owner Search Clears Previous No Match State</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6c925bba-df57-4929-8db6-c2f330e36fbd</testCaseGuid>
+</TestCaseEntity>

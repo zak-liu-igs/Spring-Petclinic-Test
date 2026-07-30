@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add a visit with a Unicode description, and verify the exact saved text in the pet visit history.</description>
+   <name>051_Add Visit With Unicode Description</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4b040828-2934-425b-8aef-82ca33b39663</testCaseGuid>
+</TestCaseEntity>

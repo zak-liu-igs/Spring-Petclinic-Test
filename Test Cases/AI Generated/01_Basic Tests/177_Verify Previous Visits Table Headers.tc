@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the New Visit page Previous Visits table exposes Date and Description columns.</description>
+   <name>177_Verify Previous Visits Table Headers</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1bd5102c-99e0-495b-ab35-681a6a1d9c20</testCaseGuid>
+</TestCaseEntity>

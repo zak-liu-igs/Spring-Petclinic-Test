@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Rename an existing pet with Unicode characters and verify the new name is displayed.</description>
+   <name>153_Rename Pet With Unicode Characters</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2eaec330-9982-4c5c-b009-b70082980153</testCaseGuid>
+</TestCaseEntity>

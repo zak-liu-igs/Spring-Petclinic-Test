@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the Add Visit control is an enabled primary submit button with the expected label.</description>
+   <name>170_Verify Add Visit Button Attributes</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a4b94870-0d7d-4f3a-b96d-b44f92d61783</testCaseGuid>
+</TestCaseEntity>

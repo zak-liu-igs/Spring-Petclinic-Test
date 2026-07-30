@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create two owners with a shared unique last-name prefix and verify every search-result column for both rows.</description>
+   <name>069_Verify Multiple Owner Search Results Show Complete Rows</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>738ad1e6-b429-4c75-91f8-e05362ab947d</testCaseGuid>
+</TestCaseEntity>

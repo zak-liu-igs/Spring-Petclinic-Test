@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, add a pet with a unique valid name, and verify the pet appears on the owner details page.</description>
+   <name>031_Add Pet With Unique Valid Name</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>47dd488a-823f-4f8e-b6b7-fdcb4113fd01</testCaseGuid>
+</TestCaseEntity>

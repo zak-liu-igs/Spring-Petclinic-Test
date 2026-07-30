@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate away from the home page, click the Petclinic brand link, and verify it returns to the home page.</description>
+   <name>097_Verify Brand Link Returns To Home Page</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7b659914-8d42-4d0b-81ac-1cd2996b9506</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit otherwise valid owner data without an address and verify field-level validation.</description>
+   <name>113_Verify Owner Form Rejects Empty Address</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a7989577-16b6-4889-9bd8-ee2c5cbe4944</testCaseGuid>
+</TestCaseEntity>

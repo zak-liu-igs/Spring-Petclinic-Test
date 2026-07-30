@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>11_Owner Telephone Validation Test</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>e9b3a4b1-08f4-4ed8-8ca9-7e0378fdfb05</testCaseGuid>
-</TestCaseEntity>

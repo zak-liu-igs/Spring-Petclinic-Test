@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, add a visit seven days in the future, and verify the exact date and description in that pet's visit history.</description>
+   <name>048_Add Visit With Custom Future Date</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dae3f156-2216-465b-9df0-737657369317</testCaseGuid>
+</TestCaseEntity>

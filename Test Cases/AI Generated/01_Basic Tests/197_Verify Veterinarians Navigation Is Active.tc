@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate to Veterinarians and verify its navigation link is marked active.</description>
+   <name>197_Verify Veterinarians Navigation Is Active</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>214c49df-3f7d-43b2-a27e-3332dfdb0225</testCaseGuid>
+</TestCaseEntity>

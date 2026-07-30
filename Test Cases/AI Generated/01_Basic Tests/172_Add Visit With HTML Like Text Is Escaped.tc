@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add HTML-like description text and verify it is displayed as escaped text rather than executable markup.</description>
+   <name>172_Add Visit With HTML Like Text Is Escaped</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>87f60ad9-b93c-4e24-8cf6-93e8017bc4ed</testCaseGuid>
+</TestCaseEntity>

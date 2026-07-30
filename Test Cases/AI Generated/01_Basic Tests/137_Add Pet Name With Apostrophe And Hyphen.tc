@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify a pet name containing an apostrophe and hyphen can be stored and displayed.</description>
+   <name>137_Add Pet Name With Apostrophe And Hyphen</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8de40e3e-6c25-4cc0-b160-aaea882d0137</testCaseGuid>
+</TestCaseEntity>

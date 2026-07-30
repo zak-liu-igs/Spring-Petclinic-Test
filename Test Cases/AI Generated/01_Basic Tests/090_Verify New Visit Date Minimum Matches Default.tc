@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner and pet, open the New Visit form, and verify the date minimum equals its tomorrow default.</description>
+   <name>090_Verify New Visit Date Minimum Matches Default</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4a95a5e7-eb1a-44bc-861d-c1f808fd0e81</testCaseGuid>
+</TestCaseEntity>

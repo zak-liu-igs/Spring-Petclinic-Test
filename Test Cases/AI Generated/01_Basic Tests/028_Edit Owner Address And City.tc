@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, edit the address and city, and verify the updated owner data is displayed.</description>
+   <name>028_Edit Owner Address And City</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e83fde9f-b7ca-45f8-99ff-bce93b3dc2cd</testCaseGuid>
+</TestCaseEntity>

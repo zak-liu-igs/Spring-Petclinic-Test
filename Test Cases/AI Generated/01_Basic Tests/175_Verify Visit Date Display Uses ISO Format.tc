@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify every displayed visit date for seeded pet Samantha uses the yyyy-MM-dd ISO format.</description>
+   <name>175_Verify Visit Date Display Uses ISO Format</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9997888e-c493-49a8-a301-1d7aa5dbd82c</testCaseGuid>
+</TestCaseEntity>

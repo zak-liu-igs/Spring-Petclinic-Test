@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open an owner from a multi-result search and verify Browser Back restores the same results.</description>
+   <name>133_Verify Browser Back Returns To Owner Search Results</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b3623443-fe64-409f-a108-0d7aa2e46fa6</testCaseGuid>
+</TestCaseEntity>

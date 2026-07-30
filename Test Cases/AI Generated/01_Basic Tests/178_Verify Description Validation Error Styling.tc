@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an empty visit description and verify its field group receives error styling and help text.</description>
+   <name>178_Verify Description Validation Error Styling</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2949d6c0-4f00-4c78-a33c-79f5bc9a15ab</testCaseGuid>
+</TestCaseEntity>

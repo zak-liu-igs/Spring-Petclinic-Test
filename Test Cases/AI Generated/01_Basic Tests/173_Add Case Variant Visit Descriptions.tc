@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add uppercase and lowercase variants of one visit description and verify both values remain distinct.</description>
+   <name>173_Add Case Variant Visit Descriptions</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>212c54b6-6b47-4273-a15b-013759e5f3c3</testCaseGuid>
+</TestCaseEntity>

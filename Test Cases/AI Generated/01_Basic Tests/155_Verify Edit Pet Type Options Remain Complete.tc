@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the edit-pet form retains the complete supported type list and current selection.</description>
+   <name>155_Verify Edit Pet Type Options Remain Complete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>45916c19-505c-41f8-a816-343b6e0e0155</testCaseGuid>
+</TestCaseEntity>

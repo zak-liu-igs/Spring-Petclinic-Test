@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify case-variant pet names are independent when they belong to different owners.</description>
+   <name>150_Add Case Variant Pet Names To Different Owners</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>440bdf83-ca11-4195-a334-731f24a10150</testCaseGuid>
+</TestCaseEntity>

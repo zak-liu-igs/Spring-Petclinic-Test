@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify every corresponding value in the Owner Information table.</description>
+   <name>122_Verify Created Owner Details Table</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4cb64875-b303-462d-9501-0e501453bb39</testCaseGuid>
+</TestCaseEntity>

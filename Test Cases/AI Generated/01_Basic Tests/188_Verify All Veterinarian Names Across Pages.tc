@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the complete six-name seeded veterinarian set is rendered across both pages.</description>
+   <name>188_Verify All Veterinarian Names Across Pages</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>301dbe42-48e3-41c1-a791-cf38e582cbba</testCaseGuid>
+</TestCaseEntity>

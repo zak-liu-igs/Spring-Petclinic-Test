@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, attempt to add a pet with an empty name, and verify validation is displayed.</description>
+   <name>036_Add Pet With Empty Name Validation</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3a106750-73da-47ca-bcf8-95c4093013e5</testCaseGuid>
+</TestCaseEntity>

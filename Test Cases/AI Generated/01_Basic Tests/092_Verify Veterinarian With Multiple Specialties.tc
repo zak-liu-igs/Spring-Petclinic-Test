@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Open the Veterinarians page and verify Linda Douglas displays both dentistry and surgery specialties.</description>
+   <name>092_Verify Veterinarian With Multiple Specialties</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e3a00efa-bf23-40ab-bc83-46355ab2b797</testCaseGuid>
+</TestCaseEntity>

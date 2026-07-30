@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add a hamster pet and verify its persisted type in the owner record.</description>
+   <name>142_Add Hamster Pet To Owner</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e346b2db-c9f7-4e92-945f-030eecef0142</testCaseGuid>
+</TestCaseEntity>

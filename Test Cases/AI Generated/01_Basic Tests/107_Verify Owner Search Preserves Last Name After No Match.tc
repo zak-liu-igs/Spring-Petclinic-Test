@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that a failed owner search preserves the submitted last name for correction.</description>
+   <name>107_Verify Owner Search Preserves Last Name After No Match</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dc621313-c4f9-437d-b4af-dd4ab3a311ba</testCaseGuid>
+</TestCaseEntity>

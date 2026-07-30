@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner using a Unicode city name and verify the exact persisted text.</description>
+   <name>121_Create Owner With Unicode City</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>03e73e15-dd16-4174-af63-bd4bb9c461dd</testCaseGuid>
+</TestCaseEntity>

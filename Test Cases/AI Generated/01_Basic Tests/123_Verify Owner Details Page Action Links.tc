@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify the owner-specific Edit Owner and Add New Pet actions.</description>
+   <name>123_Verify Owner Details Page Action Links</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>40e93136-44d1-4d18-9360-04247ee6c2ca</testCaseGuid>
+</TestCaseEntity>

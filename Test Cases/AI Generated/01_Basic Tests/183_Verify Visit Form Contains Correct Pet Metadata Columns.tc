@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the visit form identifies seeded pet Samantha with Name, Birth Date, Type, and Owner metadata columns.</description>
+   <name>183_Verify Visit Form Contains Correct Pet Metadata Columns</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>616ca450-8a1a-4bd4-b34a-cd7a2012dca5</testCaseGuid>
+</TestCaseEntity>

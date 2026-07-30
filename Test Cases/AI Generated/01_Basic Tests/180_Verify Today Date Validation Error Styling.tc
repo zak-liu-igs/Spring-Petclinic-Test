@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit today as the visit date and verify the date field receives error styling and future-date help text.</description>
+   <name>180_Verify Today Date Validation Error Styling</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c94de3ce-6023-420c-b6a3-bbd4b7e2c77a</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner using the maximum valid ten-digit telephone and verify the stored value.</description>
+   <name>118_Create Owner With Ten Digit Telephone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c09dd6ee-6b26-4c01-9f4c-2515105409e8</testCaseGuid>
+</TestCaseEntity>

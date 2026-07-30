@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an empty description after selecting a valid future date and verify the chosen date remains populated.</description>
+   <name>182_Verify Empty Description Retains Selected Visit Date</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3a6ee732-62a5-47c8-a046-67eabef6fa82</testCaseGuid>
+</TestCaseEntity>

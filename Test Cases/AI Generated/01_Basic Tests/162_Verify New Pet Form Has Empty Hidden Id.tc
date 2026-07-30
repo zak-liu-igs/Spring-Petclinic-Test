@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the new-pet form contains exactly one hidden pet ID field and that its value is empty for a new entity.</description>
+   <name>162_Verify New Pet Form Has Empty Hidden Id</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f23b1e0b-68ba-4116-9ab6-97faf4860162</testCaseGuid>
+</TestCaseEntity>

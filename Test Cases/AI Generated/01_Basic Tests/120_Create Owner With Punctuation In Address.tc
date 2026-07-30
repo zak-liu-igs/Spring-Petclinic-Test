@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner whose address contains common punctuation and verify the exact stored address.</description>
+   <name>120_Create Owner With Punctuation In Address</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a77d90b7-0090-4416-983d-f2b2beae7364</testCaseGuid>
+</TestCaseEntity>

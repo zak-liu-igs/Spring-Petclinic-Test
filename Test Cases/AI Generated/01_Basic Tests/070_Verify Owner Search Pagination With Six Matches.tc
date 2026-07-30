@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create six owners with a shared unique prefix and verify the five-row first page and one-row second page.</description>
+   <name>070_Verify Owner Search Pagination With Six Matches</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c15f8934-72e0-46ba-a319-84d57ce206fb</testCaseGuid>
+</TestCaseEntity>

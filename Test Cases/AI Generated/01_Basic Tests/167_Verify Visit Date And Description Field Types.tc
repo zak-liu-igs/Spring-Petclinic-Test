@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the visit date and description controls expose the expected HTML field types and names.</description>
+   <name>167_Verify Visit Date And Description Field Types</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>111cd8ab-b15d-4c3f-bd0e-4cdc49e66341</testCaseGuid>
+</TestCaseEntity>

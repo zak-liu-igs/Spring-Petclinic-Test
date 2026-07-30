@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the visit form submits with POST to the current owner and pet visit URL.</description>
+   <name>168_Verify Visit Form Method And Action</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>83162319-79ec-4206-86ab-0a539757168c</testCaseGuid>
+</TestCaseEntity>

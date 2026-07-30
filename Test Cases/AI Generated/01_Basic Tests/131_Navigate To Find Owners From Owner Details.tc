@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify Find Owners navigation from the owner details page.</description>
+   <name>131_Navigate To Find Owners From Owner Details</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>50939404-9131-4f60-814f-82a051576a45</testCaseGuid>
+</TestCaseEntity>

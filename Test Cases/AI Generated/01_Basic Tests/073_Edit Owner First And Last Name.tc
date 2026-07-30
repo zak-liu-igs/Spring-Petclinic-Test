@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a unique owner, update only the first and last names, and verify the new full name replaces the old name.</description>
+   <name>073_Edit Owner First And Last Name</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>54b0ce72-31f9-4a85-967d-e2083f6ca491</testCaseGuid>
+</TestCaseEntity>

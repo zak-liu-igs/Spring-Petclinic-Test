@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trigger the application error page and verify its heading, status message, and expected exception detail.</description>
+   <name>099_Verify Error Page Displays Trigger Exception Detail</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>aecb5f1a-6497-4cef-840b-6b844ba83fc3</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify First and Previous pagination controls render as disabled spans on veterinarian page one.</description>
+   <name>192_Verify First And Previous Controls Disabled On First Page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7f7c5ef6-6ba7-4b18-b84d-9d790e400016</testCaseGuid>
+</TestCaseEntity>

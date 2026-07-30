@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Linda Douglas's two specialties render as two distinct span elements in the table.</description>
+   <name>190_Verify Specialty Values Render As Separate Elements</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0ba02fcc-5256-4cec-819e-48d69f8de67c</testCaseGuid>
+</TestCaseEntity>

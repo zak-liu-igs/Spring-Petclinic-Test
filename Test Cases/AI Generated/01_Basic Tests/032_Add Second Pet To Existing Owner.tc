@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search for George Franklin, add a unique pet, and verify the new pet appears under the owner.</description>
+   <name>032_Add Second Pet To Existing Owner</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>46947d8a-bce0-498b-975e-7ee903034e4a</testCaseGuid>
+</TestCaseEntity>

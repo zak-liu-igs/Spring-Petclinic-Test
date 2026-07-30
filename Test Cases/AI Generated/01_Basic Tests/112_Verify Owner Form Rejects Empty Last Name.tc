@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit otherwise valid owner data without a last name and verify field-level validation.</description>
+   <name>112_Verify Owner Form Rejects Empty Last Name</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f563746e-b00e-43fc-912c-5e89a1d63e08</testCaseGuid>
+</TestCaseEntity>

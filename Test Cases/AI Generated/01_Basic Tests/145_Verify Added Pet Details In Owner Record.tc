@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify an added pet's name, birth date, and type are shown together in its owner record.</description>
+   <name>145_Verify Added Pet Details In Owner Record</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2c922f43-3bc6-462d-86a1-928288820145</testCaseGuid>
+</TestCaseEntity>

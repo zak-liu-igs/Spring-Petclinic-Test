@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify Veterinarians navigation from the owner details page.</description>
+   <name>130_Navigate To Veterinarians From Owner Details</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d1e27f9d-98fd-4b36-8a31-1460df862031</testCaseGuid>
+</TestCaseEntity>

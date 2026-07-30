@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit letters in the owner telephone field and verify numeric validation.</description>
+   <name>116_Verify Owner Form Rejects Non Numeric Telephone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e8f3f546-ddc3-47e6-9d82-05fdb24f443a</testCaseGuid>
+</TestCaseEntity>
