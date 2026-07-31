@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify the edit-pet form identifies the correct owner and retains the pet values.</description>
    <name>156_Verify Edit Pet Form Retains Owner Context</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>f2e22f97-e37d-4a6e-93d1-4295e8c30156</testCaseGuid>
 </TestCaseEntity>

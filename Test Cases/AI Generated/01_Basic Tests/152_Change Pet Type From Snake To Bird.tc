@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Change an existing pet's type from snake to bird and verify the updated type is persisted.</description>
    <name>152_Change Pet Type From Snake To Bird</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>3dd32669-0331-4c34-a42c-98d40af60152</testCaseGuid>
 </TestCaseEntity>

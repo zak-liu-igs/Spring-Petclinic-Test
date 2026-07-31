@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add three unique pets to one owner and verify all three pet action groups are rendered.</description>
    <name>148_Add Three Pets To One Owner</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>61ff5cec-5965-4bc0-986c-4689a52f0148</testCaseGuid>
 </TestCaseEntity>

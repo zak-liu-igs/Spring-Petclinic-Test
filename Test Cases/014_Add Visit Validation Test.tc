@@ -2,7 +2,7 @@
 <TestCaseEntity>
    <description></description>
    <name>014_Add Visit Validation Test</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>59339923-110e-4bff-9afd-b06e5385d46d</testCaseGuid>

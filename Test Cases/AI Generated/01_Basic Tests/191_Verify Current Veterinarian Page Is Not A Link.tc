@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify that the current veterinarian page number is plain text while the other page remains linked.</description>
    <name>191_Verify Current Veterinarian Page Is Not A Link</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>87239aed-c864-4f95-83fd-b7c49c76004c</testCaseGuid>
 </TestCaseEntity>

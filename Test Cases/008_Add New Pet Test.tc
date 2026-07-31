@@ -2,7 +2,7 @@
 <TestCaseEntity>
    <description></description>
    <name>008_Add New Pet Test</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>1034dd86-646f-4ecc-82eb-f321633940ee</testCaseGuid>

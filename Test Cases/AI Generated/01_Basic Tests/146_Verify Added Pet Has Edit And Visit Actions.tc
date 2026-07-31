@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify a newly added pet exposes both Edit Pet and Add Visit actions.</description>
    <name>146_Verify Added Pet Has Edit And Visit Actions</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>99932a90-0aca-47e6-83ad-60dcbb6e0146</testCaseGuid>
 </TestCaseEntity>

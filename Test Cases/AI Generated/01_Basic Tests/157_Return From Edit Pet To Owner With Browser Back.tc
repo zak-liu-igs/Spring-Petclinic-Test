@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify browser Back returns from a pet edit form to the correct owner without altering data.</description>
    <name>157_Return From Edit Pet To Owner With Browser Back</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>15669271-aaf4-4f70-89a0-2c173da70157</testCaseGuid>
 </TestCaseEntity>
