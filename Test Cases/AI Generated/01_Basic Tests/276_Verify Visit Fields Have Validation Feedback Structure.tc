@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify both visit fields have Bootstrap validation containers and accessible feedback icons.</description>
+   <name>276_Verify Visit Fields Have Validation Feedback Structure</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>875ecc9a-bc64-4ad4-ac27-a150bb696732</testCaseGuid>
+</TestCaseEntity>

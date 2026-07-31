@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the exact telephone validation message and error styling shown for a nonnumeric value.</description>
+   <name>225_Verify Numeric Telephone Validation Message</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bf6426e6-ad81-4679-a8ec-6cb76d5820c2</testCaseGuid>
+</TestCaseEntity>

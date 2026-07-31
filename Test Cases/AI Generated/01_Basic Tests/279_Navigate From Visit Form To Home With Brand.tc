@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Use the brand link on a visit form and verify it returns to the home page.</description>
+   <name>279_Navigate From Visit Form To Home With Brand</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bb12fccb-c268-4e90-9c1a-55481e43bc74</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the home pet image uses responsive styling and loads a nonzero image resource.</description>
+   <name>209_Verify Home Pet Image Styling And Load</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d2cafb3a-a1a9-4fab-b52d-39f4b67f1a4c</testCaseGuid>
+</TestCaseEntity>

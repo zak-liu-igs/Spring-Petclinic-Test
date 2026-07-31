@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the owner search form submits with GET to the owners collection route.</description>
+   <name>213_Verify Owner Search Form Method And Action</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0d422b44-7db4-44c6-a721-2f0c0559731d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the navbar brand is visible, contains its mark, and links to the application root.</description>
+   <name>206_Verify Navbar Brand Target And Structure</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dccd5197-90f8-481a-b0f5-08210f151348</testCaseGuid>
+</TestCaseEntity>

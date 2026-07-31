@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add an HTML-like pet name and verify the owner page renders it as text without creating markup.</description>
+   <name>245_Verify HTML Like Pet Name Is Escaped</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0cde9ef1-8802-4d6b-a8e6-2d690edc56ea</testCaseGuid>
+</TestCaseEntity>

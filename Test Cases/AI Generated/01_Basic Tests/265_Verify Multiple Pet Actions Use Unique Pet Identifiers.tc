@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add three pets and verify their edit and visit actions use distinct matching pet identifiers under one owner.</description>
+   <name>265_Verify Multiple Pet Actions Use Unique Pet Identifiers</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8dbd17c7-7049-4c66-a6b8-62f0959d6b4c</testCaseGuid>
+</TestCaseEntity>

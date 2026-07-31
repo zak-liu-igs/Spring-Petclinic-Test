@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the new-pet form binds its owner through the route and exposes no editable owner identifier control.</description>
+   <name>238_Verify New Pet Form Does Not Expose Editable Owner Id</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d64d761c-f7a9-4303-ba79-dddca010bab6</testCaseGuid>
+</TestCaseEntity>

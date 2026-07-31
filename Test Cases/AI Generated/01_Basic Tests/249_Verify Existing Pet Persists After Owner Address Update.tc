@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update an owner's address after adding a pet and verify the pet details remain attached and unchanged.</description>
+   <name>249_Verify Existing Pet Persists After Owner Address Update</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f65af3e5-d59f-4881-8d46-7ebfa9d7e488</testCaseGuid>
+</TestCaseEntity>

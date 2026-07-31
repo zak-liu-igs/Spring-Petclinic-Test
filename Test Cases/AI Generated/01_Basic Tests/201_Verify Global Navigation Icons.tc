@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that each global navigation entry displays the icon associated with its destination.</description>
+   <name>201_Verify Global Navigation Icons</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8af900a5-4d37-4f67-8f6d-f36417ffbca7</testCaseGuid>
+</TestCaseEntity>

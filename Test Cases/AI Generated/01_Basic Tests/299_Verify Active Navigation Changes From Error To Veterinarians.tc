@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify active navigation changes from Error to Veterinarians after cross-page navigation.</description>
+   <name>299_Verify Active Navigation Changes From Error To Veterinarians</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>43e32b7d-e3c0-4dbf-9a64-95818f37ec51</testCaseGuid>
+</TestCaseEntity>

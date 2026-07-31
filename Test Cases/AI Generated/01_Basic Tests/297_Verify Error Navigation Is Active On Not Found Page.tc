@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify a 404 page marks Error, and only Error, as the active primary navigation item.</description>
+   <name>297_Verify Error Navigation Is Active On Not Found Page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>df1b9a0d-daf8-4adb-9ca9-6b8ab63bea0f</testCaseGuid>
+</TestCaseEntity>

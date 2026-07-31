@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the owner shown on a new-pet form is exact read-only text rather than an editable field.</description>
+   <name>239_Verify New Pet Owner Context Is Read Only</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c6103324-b377-4658-8680-8c9a60235c6b</testCaseGuid>
+</TestCaseEntity>

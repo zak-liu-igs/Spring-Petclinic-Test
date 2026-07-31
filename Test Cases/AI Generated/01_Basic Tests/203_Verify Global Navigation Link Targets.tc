@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that every global navigation link points to its expected local Petclinic route.</description>
+   <name>203_Verify Global Navigation Link Targets</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dd14f36e-4c27-42e9-ad35-f19d6fa784df</testCaseGuid>
+</TestCaseEntity>

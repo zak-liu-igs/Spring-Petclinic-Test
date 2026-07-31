@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the visit workflow keeps Find Owners active and all other primary links inactive.</description>
+   <name>277_Verify Visit Page Highlights Find Owners Navigation</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a4af6430-21ff-404c-95fc-96d8f583e302</testCaseGuid>
+</TestCaseEntity>

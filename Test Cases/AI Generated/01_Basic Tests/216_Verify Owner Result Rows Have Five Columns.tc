@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the owner results table is populated and every result row has five data columns.</description>
+   <name>216_Verify Owner Result Rows Have Five Columns</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e3918dca-63bc-4bfe-9e7e-ea6450a54cc3</testCaseGuid>
+</TestCaseEntity>

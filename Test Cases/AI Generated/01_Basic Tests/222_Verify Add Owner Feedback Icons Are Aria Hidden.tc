@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that each add-owner field feedback icon is present and hidden from assistive technologies.</description>
+   <name>222_Verify Add Owner Feedback Icons Are Aria Hidden</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8161a685-f06b-4cfd-a527-d02567e6da08</testCaseGuid>
+</TestCaseEntity>

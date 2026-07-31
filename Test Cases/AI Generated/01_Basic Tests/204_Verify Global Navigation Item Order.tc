@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the four global navigation items appear once and in the expected order.</description>
+   <name>204_Verify Global Navigation Item Order</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a438e635-d580-4877-9819-118e43fe1fd6</testCaseGuid>
+</TestCaseEntity>

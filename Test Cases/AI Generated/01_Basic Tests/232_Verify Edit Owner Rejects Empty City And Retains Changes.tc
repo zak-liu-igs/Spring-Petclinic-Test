@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit an owner edit with an empty city and verify validation while the other changed values remain populated.</description>
+   <name>232_Verify Edit Owner Rejects Empty City And Retains Changes</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>11d4101a-2973-42b2-b4a7-8ddee0f6b00e</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify that both owner-detail actions use consistent primary button styling.</description>
+   <name>228_Verify Owner Detail Actions Use Primary Button Styling</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cb330303-46e9-41d7-8961-fe17879b43f9</testCaseGuid>
+</TestCaseEntity>

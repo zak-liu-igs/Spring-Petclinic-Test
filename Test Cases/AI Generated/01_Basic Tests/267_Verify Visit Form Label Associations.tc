@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify each visit form label is associated with the intended input control.</description>
+   <name>267_Verify Visit Form Label Associations</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c73f63e6-4196-4cc0-954f-615ceee01662</testCaseGuid>
+</TestCaseEntity>

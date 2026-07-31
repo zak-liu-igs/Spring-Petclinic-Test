@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add a pet, leave the owner page, revisit it directly, and verify the pet-owner association persists.</description>
+   <name>248_Verify Added Pet Persists After Direct Revisit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dad37f58-6a9c-40b7-8f67-0924fa5d5ec7</testCaseGuid>
+</TestCaseEntity>

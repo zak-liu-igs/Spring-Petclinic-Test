@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the footer Spring logo source, alternative text, and styling hook.</description>
+   <name>207_Verify Footer Spring Logo Attributes</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>48d7e8c7-4c23-4d7d-8f39-d01b81bc0250</testCaseGuid>
+</TestCaseEntity>

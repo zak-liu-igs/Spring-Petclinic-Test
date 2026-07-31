@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify browser history returns from page two to the canonical first veterinarian page.</description>
+   <name>287_Verify Browser Back Restores First Veterinarian Page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d46f3e6b-7c86-4eda-ba61-1fcadb211ca4</testCaseGuid>
+</TestCaseEntity>

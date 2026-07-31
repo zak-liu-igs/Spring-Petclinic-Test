@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner and verify the order and count of the owner-information row labels.</description>
+   <name>226_Verify Owner Details Table Row Labels</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b810704d-67de-418f-9fb0-3c59358f53d6</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the complete displayed specialty catalog across both veterinarian pages.</description>
+   <name>283_Verify Veterinarian Specialty Catalog Across Pages</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>55eec9b9-fa06-4e25-a61f-cef5bf8f3aab</testCaseGuid>
+</TestCaseEntity>

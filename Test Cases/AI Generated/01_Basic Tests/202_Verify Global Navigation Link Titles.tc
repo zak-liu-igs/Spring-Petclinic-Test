@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the descriptive title attributes on all global navigation links.</description>
+   <name>202_Verify Global Navigation Link Titles</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bfd0a480-6c18-48ff-a422-02a3e9bb5115</testCaseGuid>
+</TestCaseEntity>

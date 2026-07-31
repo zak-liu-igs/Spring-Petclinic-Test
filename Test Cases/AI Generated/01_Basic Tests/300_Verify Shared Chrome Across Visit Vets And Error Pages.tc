@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Visit, Veterinarians, and Error pages share the same title, primary navigation, and footer branding.</description>
+   <name>300_Verify Shared Chrome Across Visit Vets And Error Pages</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e281ea84-eda3-4346-95ac-959c52a989b3</testCaseGuid>
+</TestCaseEntity>

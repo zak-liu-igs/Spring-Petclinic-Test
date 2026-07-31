@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the visit form exposes exactly the expected editable controls and submit button.</description>
+   <name>268_Verify Visit Form Editable Control Contract</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4340f8be-d6aa-4856-9f4c-b1673832ab4d</testCaseGuid>
+</TestCaseEntity>

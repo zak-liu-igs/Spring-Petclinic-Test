@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify specialty occurrences and veterinarian totals across both veterinarian pages.</description>
+   <name>284_Verify Veterinarian Specialty Counts Across Pages</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>49b76f9d-0858-467b-bb3c-6edc32b0da72</testCaseGuid>
+</TestCaseEntity>

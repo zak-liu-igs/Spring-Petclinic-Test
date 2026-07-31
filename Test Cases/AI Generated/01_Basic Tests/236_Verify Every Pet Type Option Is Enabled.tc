@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify every supported pet type option is enabled, selectable, and has a nonempty value.</description>
+   <name>236_Verify Every Pet Type Option Is Enabled</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>afa9c752-d880-4b1b-b209-0b22ec8d3c18</testCaseGuid>
+</TestCaseEntity>

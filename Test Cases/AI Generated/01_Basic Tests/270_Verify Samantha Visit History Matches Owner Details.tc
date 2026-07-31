@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Samantha's previous visits are identical on the visit form and owner details page.</description>
+   <name>270_Verify Samantha Visit History Matches Owner Details</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dcb97b6e-9e97-45b9-b677-2d309b908a34</testCaseGuid>
+</TestCaseEntity>

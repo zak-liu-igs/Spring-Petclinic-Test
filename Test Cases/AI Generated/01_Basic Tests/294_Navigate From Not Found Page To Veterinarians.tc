@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate from a 404 page to Veterinarians and verify the destination and active state.</description>
+   <name>294_Navigate From Not Found Page To Veterinarians</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d5215e53-df56-4d9e-8026-e99806d7c586</testCaseGuid>
+</TestCaseEntity>

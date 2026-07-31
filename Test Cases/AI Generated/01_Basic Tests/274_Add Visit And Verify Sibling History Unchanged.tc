@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add a visit to Samantha and verify Max's visit-history count and contents remain unchanged.</description>
+   <name>274_Add Visit And Verify Sibling History Unchanged</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6ad84bc3-0cb3-4614-9518-254f7c4fe20a</testCaseGuid>
+</TestCaseEntity>

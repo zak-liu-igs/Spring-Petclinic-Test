@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate from a visit form to Veterinarians and verify the destination and active navigation state.</description>
+   <name>278_Navigate From Visit Form To Veterinarians</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e44f692d-c5e6-439d-8ae1-6d30c67f429e</testCaseGuid>
+</TestCaseEntity>

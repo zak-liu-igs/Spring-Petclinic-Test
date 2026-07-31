@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the custom error page includes both its pet illustration and branded footer logo.</description>
+   <name>292_Verify Error Page Pet Image And Footer Branding</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e6f8d6dd-de2d-40c0-a3e6-38c964407351</testCaseGuid>
+</TestCaseEntity>

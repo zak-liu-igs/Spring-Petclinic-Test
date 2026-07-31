@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create an owner with no pets and verify that the empty Pets and Visits section exposes no pet edit or visit actions.</description>
+   <name>227_Verify New Owner Has No Pet Actions In Visit Section</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5b54b871-83d8-4ff1-a6bd-51a5507b6055</testCaseGuid>
+</TestCaseEntity>

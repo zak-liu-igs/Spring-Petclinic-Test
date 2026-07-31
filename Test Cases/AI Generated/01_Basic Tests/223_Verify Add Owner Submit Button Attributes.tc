@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the Add Owner control is a primary submit button inside the add-owner form.</description>
+   <name>223_Verify Add Owner Submit Button Attributes</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8b56854e-23c8-4756-88c7-60f33e7e77d8</testCaseGuid>
+</TestCaseEntity>

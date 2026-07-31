@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Change a pet's type, leave the owner page, revisit it directly, and verify only the updated type is associated.</description>
+   <name>258_Verify Updated Pet Type Persists After Direct Revisit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cee12af4-9b5b-4bb9-9b56-0f5c50f571b6</testCaseGuid>
+</TestCaseEntity>

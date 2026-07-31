@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate from a 404 page to Find Owners and verify the search-page contract.</description>
+   <name>296_Navigate From Not Found Page To Find Owners</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dd4eb3a0-0599-4d62-88bf-148aa8f3f31c</testCaseGuid>
+</TestCaseEntity>

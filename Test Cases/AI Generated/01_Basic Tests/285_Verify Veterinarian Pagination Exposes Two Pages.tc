@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify veterinarian pagination exposes exactly pages one and two with a single current-page marker.</description>
+   <name>285_Verify Veterinarian Pagination Exposes Two Pages</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>03e2d004-7108-4ba4-8a75-5350dde063b0</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify veterinarian names render as complete plain-text values rather than links.</description>
+   <name>282_Verify Veterinarian Name Cells Are Plain Text</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9ae8d958-236d-444e-af5a-8c57580f04f1</testCaseGuid>
+</TestCaseEntity>

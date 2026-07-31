@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Navigate from the internal-error page to Home and verify the destination and active state.</description>
+   <name>295_Navigate From Internal Error Page To Home</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>51106d3b-812a-4bd5-8278-62649043c7db</testCaseGuid>
+</TestCaseEntity>

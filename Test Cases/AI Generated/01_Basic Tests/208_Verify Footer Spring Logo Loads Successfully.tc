@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that the footer Spring logo is visible and its image resource finishes loading.</description>
+   <name>208_Verify Footer Spring Logo Loads Successfully</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4a6fe787-d210-49fb-a2c2-e496c9953da8</testCaseGuid>
+</TestCaseEntity>
