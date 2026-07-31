@@ -1,52 +1,82 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import com.kms.katalon.core.testcase.TestCase as TestCase
-import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.testobject.TestObject as TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser(null)
+String baseUrl = 'http://localhost:8080'
+String repository = 'Page_PetClinic  a Spring Framework demonstration/'
+String token = System.currentTimeMillis().toString()
+String firstName = 'AddPetF' + token.substring(token.length() - 6)
+String lastName = 'AddPetL' + token.substring(token.length() - 7)
+String fullName = firstName + ' ' + lastName
+String petName = 'Lucky' + token.substring(token.length() - 6)
+String birthDate = '2024-01-01'
+String petType = 'dog'
 
-WebUI.navigateToUrl('http://localhost:8080')
+def xpath = { String name, String expression ->
+    TestObject object = new TestObject(name)
+    object.addProperty('xpath', ConditionType.EQUALS, expression)
+    return object
+}
 
-WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/div_col-md-12'))
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
 
-WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_find owners'))
+try {
+    WebUI.openBrowser('')
+    WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
 
-WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_lastName'), 'Davis')
+    // Create isolated test data instead of relying on seeded owner Davis and pet name Lucky.
+    // The seeded data can change between runs, and Lucky may already exist, causing duplicate-name validation.
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_First Name'), 10)
+    WebUI.setText(findTestObject(repository + 'input_First Name'), firstName)
+    WebUI.setText(findTestObject(repository + 'input_lastName'), lastName)
+    WebUI.setText(findTestObject(repository + 'input_Address'), token + ' Add Pet Street')
+    WebUI.setText(findTestObject(repository + 'input_City'), 'AddPetCity')
+    WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
+    WebUI.click(findTestObject(repository + 'button_Add Owner'))
+    WebUI.waitForPageLoad(10)
 
-WebUI.sendKeys(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_lastName'), Keys.chord(Keys.ENTER))
+    WebUI.verifyTextPresent(fullName, false)
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    def ownerMatcher = ownerUrl =~ /\/owners\/(\d+)\/?$/
+    WebUI.verifyEqual(ownerMatcher.find(), true)
+    String ownerId = ownerMatcher.group(1)
 
-WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Test Davis'))
+    WebUI.waitForElementVisible(findTestObject(repository + 'a_Add New Pet'), 10)
+    WebUI.click(findTestObject(repository + 'a_Add New Pet'))
+    WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/a_Add New Pet'))
+    // On the New Pet form the pet name input has id/name 'name'. Use the pet-specific repository object.
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_PetName'), 10)
+    WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
 
-WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Name'), 'Lucky')
-
-WebUI.executeJavaScript("""
+    WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
-d.value = '2024-01-01';
+if (!d) {
+    throw new Error('Birth Date field was not found');
+}
+d.value = arguments[0];
 d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
-""", null)
+""", [birthDate])
 
-WebUI.selectOptionByValue(findTestObject('Page_PetClinic  a Spring Framework demonstration/select_Type'), 'dog', false)
+    WebUI.waitForElementVisible(findTestObject(repository + 'select_Type'), 10)
+    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), petType, false)
+    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Pet'))
+    String finalUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(finalUrl, '^' + baseUrl + '/owners/' + ownerId + '/?$', true)
 
-WebUI.verifyTextPresent('Lucky', false)
-
-WebUI.closeBrowser()
-
+    TestObject addedPetRow = xpath('addedPetRow',
+        "//h2[normalize-space(.)='Pets and Visits']/following::tr[.//dt[normalize-space(.)='Name']/following-sibling::dd[1][normalize-space(.)='" + petName + "'] and .//dt[normalize-space(.)='Birth Date']/following-sibling::dd[1][normalize-space(.)='" + birthDate + "'] and .//dt[normalize-space(.)='Type']/following-sibling::dd[1][normalize-space(.)='" + petType + "']]")
+    WebUI.verifyElementPresent(addedPetRow, 10)
+    WebUI.verifyTextPresent(petName, false)
+    WebUI.verifyTextPresent(petType, false)
+} finally {
+    WebUI.closeBrowser()
+}

@@ -13,9 +13,15 @@ def xpath = { String name, String expression ->
     object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
+
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_First Name'),
         'Edit' + token.substring(token.length() - 6))
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Last Name'),
@@ -25,12 +31,18 @@ try {
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Telephone'),
         token.substring(token.length() - 10))
     WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Owner'))
+    WebUI.waitForPageLoad(10)
 
-    String ownerUrl = WebUI.getUrl()
-    String ownerId = ownerUrl.substring(ownerUrl.lastIndexOf('/') + 1)
+    // PetClinic may append optional ;jsessionid=... path parameters. Normalize before extracting the owner id.
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(ownerUrl, '^' + baseUrl + '/owners/\\d+/?$', true)
+    String ownerId = (ownerUrl =~ /\/owners\/(\d+)\/?$/)[0][1]
+
     WebUI.click(xpath('editOwner', "//a[normalize-space(.)='Edit Owner']"))
+    WebUI.waitForPageLoad(10)
 
-    WebUI.verifyMatch(WebUI.getUrl(), '^http://localhost:8080/owners/' + ownerId + '/edit$', true)
+    String editOwnerUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(editOwnerUrl, '^' + baseUrl + '/owners/' + ownerId + '/edit/?$', true)
     WebUI.verifyElementPresent(xpath('ownerHeading', "//h2[normalize-space(.)='Owner']"), 10)
     WebUI.verifyElementVisible(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Update Owner'))
 } finally {

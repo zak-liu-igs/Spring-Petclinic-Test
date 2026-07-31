@@ -8,6 +8,8 @@ String baseUrl = 'http://localhost:8080'
 String repository = 'Page_PetClinic  a Spring Framework demonstration/'
 String token = System.currentTimeMillis().toString()
 String petName = 'BackPet' + token.substring(token.length() - 6)
+String petType = 'cat'
+String birthDate = '2024-01-01'
 
 def xpath = { String description, String selector ->
     TestObject object = new TestObject(description)
@@ -15,39 +17,89 @@ def xpath = { String description, String selector ->
     return object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
+def setPetTypeByValue = { String typeValue ->
+    WebUI.executeJavaScript("""
+var s = document.getElementById('type');
+if (!s) {
+    throw new Error('Pet Type select was not found');
+}
+s.value = arguments[0];
+s.dispatchEvent(new Event('input', {bubbles:true}));
+s.dispatchEvent(new Event('change', {bubbles:true}));
+""", [typeValue])
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
+
     WebUI.setText(findTestObject(repository + 'input_First Name'), 'BackCheck')
     WebUI.setText(findTestObject(repository + 'input_lastName'), 'Owner' + token.substring(token.length() - 7))
     WebUI.setText(findTestObject(repository + 'input_Address'), '157 History Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
     WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)/
+    WebUI.waitForPageLoad(10)
+
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    def ownerMatcher = ownerUrl =~ /\/owners\/(\d+)\/?$/
     WebUI.verifyEqual(ownerMatcher.find(), true)
     String ownerId = ownerMatcher.group(1)
-    WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
+
+    // Use the visible Add New Pet link so browser history contains the real owner page before the edit page.
+    WebUI.waitForElementVisible(findTestObject(repository + 'a_Add New Pet'), 10)
+    WebUI.click(findTestObject(repository + 'a_Add New Pet'))
+    WebUI.waitForPageLoad(10)
+
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_PetName'), 10)
     WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
     WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
 if (!d) {
     throw new Error('Birth Date field was not found');
 }
-d.value = '2024-01-01';
+d.value = arguments[0];
 d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
-""", null)
-    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'cat', false)
+""", [birthDate])
+
+    WebUI.waitForElementVisible(findTestObject(repository + 'select_Type'), 10)
+    // Avoid intermittent select-click interception by setting the value directly and dispatching change events.
+    setPetTypeByValue(petType)
     WebUI.click(findTestObject(repository + 'button_Add Pet'))
-    WebUI.click(xpath('edit only pet',
-        "//a[normalize-space(.)='Edit Pet' and starts-with(@href,'/owners/" + ownerId + "/pets/')]"))
-    WebUI.verifyTextPresent('Edit Pet', false)
+    WebUI.waitForPageLoad(10)
+
+    WebUI.verifyTextPresent(petName, false)
+    WebUI.verifyTextPresent(petType, false)
+
+    TestObject editPetLink = xpath('edit link for created pet',
+        "//h2[normalize-space(.)='Pets and Visits']/following::tr[.//dt[normalize-space(.)='Name']/following-sibling::dd[1][normalize-space(.)='" + petName + "']]//a[normalize-space(.)='Edit Pet']")
+    WebUI.waitForElementClickable(editPetLink, 10)
+    WebUI.scrollToElement(editPetLink, 5)
+    WebUI.click(editPetLink)
+    WebUI.waitForPageLoad(10)
+
+    String editUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(editUrl, '^' + baseUrl + '/owners/' + ownerId + '/pets/\\d+/edit/?$', true)
+    WebUI.verifyElementPresent(xpath('petFormHeading', "//h2[contains(normalize-space(.), 'Pet')]"), 10)
+    WebUI.verifyEqual(WebUI.getAttribute(findTestObject(repository + 'input_PetName'), 'value'), petName)
 
     WebUI.back()
-    WebUI.verifyMatch(WebUI.getUrl(), 'http://localhost:8080/owners/' + ownerId + '/?', true)
+    WebUI.waitForPageLoad(10)
+
+    String returnedUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(returnedUrl, '^' + baseUrl + '/owners/' + ownerId + '/?$', true)
+
+    TestObject returnedPetRow = xpath('returned owner pet row',
+        "//h2[normalize-space(.)='Pets and Visits']/following::tr[.//dt[normalize-space(.)='Name']/following-sibling::dd[1][normalize-space(.)='" + petName + "'] and .//dt[normalize-space(.)='Type']/following-sibling::dd[1][normalize-space(.)='" + petType + "']]")
+    WebUI.verifyElementPresent(returnedPetRow, 10)
     WebUI.verifyTextPresent(petName, false)
-    WebUI.verifyTextPresent('cat', false)
+    WebUI.verifyTextPresent(petType, false)
 } finally {
     WebUI.closeBrowser()
 }

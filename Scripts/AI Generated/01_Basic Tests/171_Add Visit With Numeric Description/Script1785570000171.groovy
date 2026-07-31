@@ -1,7 +1,9 @@
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
 String visitUrl = 'http://localhost:8080/owners/6/pets/7/visits/new'
+String expectedOwnerUrl = 'http://localhost:8080/owners/6'
 String numericDescription = System.currentTimeMillis().toString()
 
 TestObject descriptionInput = new TestObject('descriptionInput')
@@ -13,7 +15,11 @@ addVisitButton.addProperty('xpath', ConditionType.EQUALS,
 
 TestObject savedDescription = new TestObject('savedDescription')
 savedDescription.addProperty('xpath', ConditionType.EQUALS,
-    "//table[contains(concat(' ', normalize-space(@class), ' '), ' table-condensed ')]//td[normalize-space(.)='" + numericDescription + "']")
+    "//table[.//th[normalize-space(.)='Visit Date'] and .//th[normalize-space(.)='Description']]//td[normalize-space(.)='" + numericDescription + "']")
+
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
 
 try {
     WebUI.openBrowser('')
@@ -26,7 +32,11 @@ try {
     WebUI.click(addVisitButton)
     WebUI.waitForPageLoad(10)
 
-    WebUI.verifyEqual(WebUI.getUrl(), 'http://localhost:8080/owners/6')
+    // PetClinic may append an optional ;jsessionid=... path parameter after redirect.
+    // Normalize it before validating the stable owner details route.
+    String normalizedUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(normalizedUrl, '^' + expectedOwnerUrl + '/?$', true)
+
     WebUI.waitForElementVisible(savedDescription, 10)
     WebUI.verifyElementText(savedDescription, numericDescription)
 } finally {

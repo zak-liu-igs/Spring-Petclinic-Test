@@ -13,9 +13,15 @@ def xpath = { String name, String expression ->
     object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
+
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_First Name'),
         'Actions' + token.substring(token.length() - 5))
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Last Name'),
@@ -25,17 +31,26 @@ try {
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Telephone'),
         token.substring(token.length() - 10))
     WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Owner'))
+    WebUI.waitForPageLoad(10)
 
-    String ownerUrl = WebUI.getUrl()
-    String ownerId = ownerUrl.substring(ownerUrl.lastIndexOf('/') + 1)
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(ownerUrl, '^' + baseUrl + '/owners/\\d+/?$', true)
+
+    String ownerId = (ownerUrl =~ /\/owners\/(\d+)\/?$/)[0][1]
+
     TestObject editOwner = xpath('editOwner', "//a[normalize-space(.)='Edit Owner']")
     TestObject addNewPet = xpath('addNewPet', "//a[normalize-space(.)='Add New Pet']")
+
     WebUI.verifyElementVisible(editOwner)
     WebUI.verifyElementVisible(addNewPet)
-    WebUI.verifyMatch(WebUI.getAttribute(editOwner, 'href'),
-        '^http://localhost:8080/owners/' + ownerId + '/edit$', true)
-    WebUI.verifyMatch(WebUI.getAttribute(addNewPet, 'href'),
-        '^http://localhost:8080/owners/' + ownerId + '/pets/new$', true)
+
+    String editOwnerHref = normalizeUrl(WebUI.getAttribute(editOwner, 'href'))
+    String addNewPetHref = normalizeUrl(WebUI.getAttribute(addNewPet, 'href'))
+
+    // PetClinic may include or omit ;jsessionid in URLs depending on session/cookie state.
+    // Validate the stable owner id and route after removing any optional session path parameter.
+    WebUI.verifyMatch(editOwnerHref, '^' + baseUrl + '/owners/' + ownerId + '/edit$', true)
+    WebUI.verifyMatch(addNewPetHref, '^' + baseUrl + '/owners/' + ownerId + '/pets/new$', true)
 } finally {
     WebUI.closeBrowser()
 }

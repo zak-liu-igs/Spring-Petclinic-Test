@@ -19,18 +19,25 @@ def xpath = { String name, String expression ->
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
+
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_First Name'), firstName)
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Last Name'), lastName)
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Address'), '118 Telephone Road')
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_City'), 'Changhua')
     WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Telephone'), telephone)
     WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Owner'))
+    WebUI.waitForPageLoad(10)
 
     WebUI.verifyElementPresent(xpath('ownerInformation', "//h2[normalize-space(.)='Owner Information']"), 10)
     WebUI.verifyElementText(xpath('telephoneValue',
         "//table[contains(@class,'table-striped')]//th[normalize-space(.)='Telephone']/following-sibling::td"),
         telephone)
-    WebUI.verifyMatch(WebUI.getUrl(), '.*/owners/\\d+$', true)
+
+    // PetClinic may append an optional ;jsessionid=... path parameter after the owner id.
+    // Normalize it before validating the stable owner details route.
+    String normalizedUrl = WebUI.getUrl().replaceFirst(';jsessionid=[^/?#]+', '')
+    WebUI.verifyMatch(normalizedUrl, '.*/owners/\\d+/?$', true)
 } finally {
     WebUI.closeBrowser()
 }

@@ -1,9 +1,9 @@
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import java.util.Arrays
 
 String visitUrl = 'http://localhost:8080/owners/6/pets/7/visits/new'
+String expectedOwnerUrl = 'http://localhost:8080/owners/6'
 String stamp = System.currentTimeMillis().toString()
 String description = '<strong>Escaped ' + stamp + '</strong> & "quoted"'
 
@@ -13,6 +13,10 @@ descriptionInput.addProperty('xpath', ConditionType.EQUALS, "//input[@id='descri
 TestObject addVisitButton = new TestObject('addVisitButton')
 addVisitButton.addProperty('xpath', ConditionType.EQUALS,
     "//form[.//input[@id='description']]//button[@type='submit' and normalize-space(.)='Add Visit']")
+
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
 
 try {
     WebUI.openBrowser('')
@@ -24,16 +28,21 @@ try {
     WebUI.click(addVisitButton)
     WebUI.waitForPageLoad(10)
 
-    WebUI.verifyEqual(WebUI.getUrl(), 'http://localhost:8080/owners/6')
-    WebUI.verifyTextPresent(description, false)
+    // PetClinic may append an optional ;jsessionid=... path parameter after redirect.
+    // Normalize it before validating the stable owner details route.
+    String normalizedUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(normalizedUrl, '^' + expectedOwnerUrl + '/?$', true)
 
-    Boolean isEscaped = WebUI.executeJavaScript("""
+    // Verify the exact text is displayed in a visit-description cell, then verify it was escaped instead of rendered as HTML.
+    Boolean isEscaped = (Boolean) WebUI.executeJavaScript("""
 var expected = arguments[0];
-var cells = Array.from(document.querySelectorAll('table.table-condensed td'));
+var cells = Array.from(document.querySelectorAll('table td'));
 var cell = cells.find(function (td) { return td.textContent.trim() === expected; });
-return !!cell && cell.querySelector('strong') === null &&
-       cell.innerHTML.indexOf('&lt;strong&gt;') !== -1;
-""", Arrays.asList(description))
+return !!cell &&
+       cell.querySelector('strong') === null &&
+       cell.innerHTML.indexOf('&lt;strong&gt;') !== -1 &&
+       cell.innerHTML.indexOf('&lt;/strong&gt;') !== -1;
+""", [description])
 
     WebUI.verifyEqual(isEscaped, true)
 } finally {
