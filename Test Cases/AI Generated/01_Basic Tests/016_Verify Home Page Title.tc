@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verify the Spring Petclinic home page title.</description>
+   <description>Verifies the Spring Petclinic home page title and main navigation labels. Updated to use Katalon test case variables instead of an undefined testData object.</description>
    <name>016_Verify Home Page Title</name>
    <tag>GenAI</tag>
-   <testDataLink>
-      <guid>3a1b0f1d-09d1-46c5-b180-1e1a6a1f973f</guid>
-      <isInternalPath>true</isInternalPath>
-      <name>HomePageData_001_1000.csv</name>
-      <path>Data Files/HomePageData_001_1000.csv</path>
-      <type>CSV</type>
-   </testDataLink>
    <comment></comment>
    <origin>STUDIOASSIST</origin>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>f2477184-81fb-4b9e-9d0a-3ab6403e4f18</testCaseGuid>
+   <variable>
+      <defaultValue>'http://localhost:8080'</defaultValue>
+      <description>Spring Petclinic application URL</description>
+      <id>e6af2065-abe7-41f7-8a0c-783b2895789c</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+   <variable>
+      <defaultValue>'PetClinic :: a Spring Framework demonstration'</defaultValue>
+      <description>Expected browser title for the home page</description>
+      <id>845080f3-2931-4af8-81ed-7b88e1c3ac95</id>
+      <masked>false</masked>
+      <name>expectedTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>'Home'</defaultValue>
+      <description>Expected Home navigation label</description>
+      <id>38ed3146-9cec-4555-9a52-a15694462e2f</id>
+      <masked>false</masked>
+      <name>expectedHomeText</name>
+   </variable>
+   <variable>
+      <defaultValue>'Find owners'</defaultValue>
+      <description>Expected Find Owners navigation label</description>
+      <id>13ecd1f0-badc-4a26-a1b6-da141c395216</id>
+      <masked>false</masked>
+      <name>expectedFindOwnersText</name>
+   </variable>
+   <variable>
+      <defaultValue>'Veterinarians'</defaultValue>
+      <description>Expected Veterinarians navigation label</description>
+      <id>43d1e1d5-534c-44de-93b5-944f5d8b51da</id>
+      <masked>false</masked>
+      <name>expectedVeterinariansText</name>
+   </variable>
+   <variable>
+      <defaultValue>'016_Verify Home Page Title'</defaultValue>
+      <description>Test case name for logging</description>
+      <id>f3343a26-20c2-4573-91c2-f71f999a2eed</id>
+      <masked>false</masked>
+      <name>caseName</name>
+   </variable>
 </TestCaseEntity>
