@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Create an owner and verify that its edit form posts back to the same owner-specific edit route.</description>
    <name>230_Verify Edit Owner Form Method And Action</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>7b60cc3e-3d5f-41fe-a6a0-2a13b18d36da</testCaseGuid>
 </TestCaseEntity>

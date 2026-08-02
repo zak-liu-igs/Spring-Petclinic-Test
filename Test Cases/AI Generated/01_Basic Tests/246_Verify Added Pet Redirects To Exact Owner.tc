@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify adding a pet redirects to the exact originating owner rather than another owner or pet route.</description>
    <name>246_Verify Added Pet Redirects To Exact Owner</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>e1ffa6a4-db92-4e28-b048-e70e66425902</testCaseGuid>
 </TestCaseEntity>

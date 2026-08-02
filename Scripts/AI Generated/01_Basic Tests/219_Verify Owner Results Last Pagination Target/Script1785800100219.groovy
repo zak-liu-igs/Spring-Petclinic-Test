@@ -10,16 +10,32 @@ def xpath = { String name, String expression ->
     object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners?lastName=')
+    WebUI.waitForPageLoad(10)
 
-    TestObject lastPage = xpath('lastOwnerPage', "//a[@title='Last']")
+    // Current PetClinic renders owner pagination with lowercase "pages" and the Last control as:
+    // <a class="fa fa-fast-forward" href="/owners?page={lastPage}" title="Last"></a>
+    // The icon class is on the anchor itself, not on a child <span>, and the empty lastName query is omitted.
+    TestObject paginationContainer = xpath('ownerPaginationContainer',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages'] and .//a[@title='Last']]")
+    TestObject lastPage = xpath('lastOwnerPage',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages']]//a[@title='Last']")
+    TestObject lastPageIcon = xpath('lastPageIcon',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages']]" +
+        "//a[@title='Last' and contains(concat(' ', normalize-space(@class), ' '), ' fa-fast-forward ')]")
+
+    WebUI.verifyElementPresent(paginationContainer, 10)
     WebUI.verifyElementVisible(lastPage)
-    WebUI.verifyMatch(WebUI.getAttribute(lastPage, 'href'),
-        '^http://localhost:8080/owners\\?page=(?:[2-9]|[1-9][0-9]+)$', true)
-    WebUI.verifyElementPresent(xpath('lastPageIcon',
-        "//a[@title='Last']/span[contains(concat(' ', normalize-space(@class), ' '), ' fa-fast-forward ')]"), 10)
+
+    String lastHref = normalizeUrl(WebUI.getAttribute(lastPage, 'href'))
+    WebUI.verifyMatch(lastHref, '^' + baseUrl + '/owners\\?page=(?:[2-9]|[1-9][0-9]+)$', true)
+    WebUI.verifyElementPresent(lastPageIcon, 10)
 } finally {
     WebUI.closeBrowser()
 }

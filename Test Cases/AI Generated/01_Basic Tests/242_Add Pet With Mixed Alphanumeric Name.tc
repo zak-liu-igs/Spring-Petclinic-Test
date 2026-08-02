@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a pet with a mixed alphabetic and numeric name and verify the exact value and type are saved.</description>
    <name>242_Add Pet With Mixed Alphanumeric Name</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>033cdc68-6d13-4e83-b144-5cde51c1b6ec</testCaseGuid>
 </TestCaseEntity>

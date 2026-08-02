@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify the first available pet type, bird, is selected by default on a new-pet form.</description>
    <name>235_Verify New Pet Type Defaults To Bird</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>b90fd113-95e3-4470-9eae-e9dade514113</testCaseGuid>
 </TestCaseEntity>

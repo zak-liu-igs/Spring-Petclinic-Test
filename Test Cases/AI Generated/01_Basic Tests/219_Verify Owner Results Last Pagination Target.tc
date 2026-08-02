@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify that the enabled Last owner-results control targets a later numeric page and uses the fast-forward icon.</description>
    <name>219_Verify Owner Results Last Pagination Target</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>9609775a-2253-4a6d-aae6-73413e1bc9a4</testCaseGuid>
 </TestCaseEntity>

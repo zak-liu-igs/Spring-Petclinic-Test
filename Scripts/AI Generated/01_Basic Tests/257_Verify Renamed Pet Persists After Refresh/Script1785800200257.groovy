@@ -9,11 +9,24 @@ String repository = 'Page_PetClinic  a Spring Framework demonstration/'
 String token = System.currentTimeMillis().toString()
 String originalName = 'RefreshOld' + token.substring(token.length() - 6)
 String updatedName = 'RefreshNew' + token.substring(token.length() - 6)
+String birthDate = '2024-01-01'
+String petType = 'dog'
 
 def xpath = { String description, String selector ->
     TestObject object = new TestObject(description)
     object.addProperty('xpath', ConditionType.EQUALS, selector)
     return object
+}
+
+def buttonByText = { String text ->
+    return xpath('button ' + text, "//button[normalize-space(.)='" + text + "'] | //input[(@type='submit' or @type='button') and @value='" + text + "']")
+}
+
+def getOwnerIdFromCurrentUrl = { ->
+    String currentUrl = WebUI.getUrl()
+    def matcher = currentUrl =~ /\/owners\/(\d+)(?:[;\/?#].*)?$/
+    WebUI.verifyEqual(matcher.find(), true)
+    return matcher.group(1)
 }
 
 try {
@@ -24,37 +37,55 @@ try {
     WebUI.setText(findTestObject(repository + 'input_Address'), '257 Rename Refresh Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
-    WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
-    WebUI.verifyEqual(ownerMatcher.find(), true)
-    String ownerId = ownerMatcher.group(1)
+    WebUI.click(buttonByText('Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    String ownerId = getOwnerIdFromCurrentUrl()
 
     WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
+    WebUI.waitForPageLoad(10)
     WebUI.setText(findTestObject(repository + 'input_PetName'), originalName)
     WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
 if (!d) {
     throw new Error('Birth Date field was not found');
 }
-d.value = '2024-01-01';
+d.value = arguments[0];
 d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
-""", null)
-    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'dog', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+""", [birthDate])
+    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), petType, false)
+    WebUI.click(buttonByText('Add Pet'))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
+
+    WebUI.verifyElementPresent(xpath('created pet details',
+        "//dl[.//dd[normalize-space(.)='" + originalName + "']]" +
+        "[.//dd[normalize-space(.)='" + birthDate + "']][.//dd[normalize-space(.)='" + petType + "']]"), 10)
+
     WebUI.click(xpath('edit created pet',
-        "//tr[.//dd[normalize-space(.)='" + originalName + "']]//a[normalize-space(.)='Edit Pet']"))
+        "//tr[.//dl[.//dd[normalize-space(.)='" + originalName + "']]]//a[normalize-space(.)='Edit Pet']"))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/pets/\\d+/edit(?:[;/?#].*)?$', true)
+
     WebUI.clearText(findTestObject(repository + 'input_PetName'))
     WebUI.setText(findTestObject(repository + 'input_PetName'), updatedName)
-    WebUI.click(findTestObject(repository + 'button_Update Pet'))
+    WebUI.click(buttonByText('Update Pet'))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
+
+    TestObject renamedPet = xpath('refreshed renamed dog',
+        "//dl[.//dd[normalize-space(.)='" + updatedName + "']]" +
+        "[.//dd[normalize-space(.)='" + birthDate + "']][.//dd[normalize-space(.)='" + petType + "']]")
+    WebUI.verifyElementPresent(renamedPet, 10)
+    WebUI.verifyTextNotPresent(originalName, true)
 
     WebUI.refresh()
     WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
     WebUI.verifyTextPresent(updatedName, true)
     WebUI.verifyTextNotPresent(originalName, true)
-    WebUI.verifyElementPresent(xpath('refreshed renamed dog',
-        "//dl[.//dd[normalize-space(.)='" + updatedName + "']][.//dd[normalize-space(.)='dog']]"), 10)
-    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/?', true)
+    WebUI.verifyElementPresent(renamedPet, 10)
 } finally {
     WebUI.closeBrowser()
 }

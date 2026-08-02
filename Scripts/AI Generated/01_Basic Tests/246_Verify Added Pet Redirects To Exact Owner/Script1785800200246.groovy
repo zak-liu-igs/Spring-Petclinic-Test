@@ -9,7 +9,10 @@ String repository = 'Page_PetClinic  a Spring Framework demonstration/'
 String token = System.currentTimeMillis().toString()
 String firstName = 'ExactOwner'
 String lastName = 'Owner' + token.substring(token.length() - 7)
+String fullName = firstName + ' ' + lastName
 String petName = 'Redirect' + token.substring(token.length() - 6)
+String birthDate = '2024-01-01'
+String petType = 'snake'
 
 def xpath = { String description, String selector ->
     TestObject object = new TestObject(description)
@@ -17,37 +20,71 @@ def xpath = { String description, String selector ->
     return object
 }
 
+def normalizeUrl = { String url ->
+    url == null ? null : url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
+def setDateById = { String fieldId, String value ->
+    WebUI.executeJavaScript("""
+var d = document.getElementById(arguments[0]);
+if (!d) {
+    throw new Error('Date field was not found: ' + arguments[0]);
+}
+d.value = arguments[1];
+d.dispatchEvent(new Event('input', {bubbles:true}));
+d.dispatchEvent(new Event('change', {bubbles:true}));
+""", [fieldId, value])
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
+    WebUI.waitForPageLoad(10)
+
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_First Name'), 10)
     WebUI.setText(findTestObject(repository + 'input_First Name'), firstName)
     WebUI.setText(findTestObject(repository + 'input_lastName'), lastName)
     WebUI.setText(findTestObject(repository + 'input_Address'), '246 Redirect Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
     WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
+    WebUI.waitForPageLoad(10)
+
+    // PetClinic may append optional ;jsessionid=... path parameters. Normalize before extracting owner id.
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    def ownerMatcher = ownerUrl =~ /\/owners\/(\d+)\/?$/
     WebUI.verifyEqual(ownerMatcher.find(), true)
     String ownerId = ownerMatcher.group(1)
 
-    WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
-    WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
-    WebUI.executeJavaScript("""
-var d = document.getElementById('birthDate');
-if (!d) {
-    throw new Error('Birth Date field was not found');
-}
-d.value = '2024-01-01';
-d.dispatchEvent(new Event('input', {bubbles:true}));
-d.dispatchEvent(new Event('change', {bubbles:true}));
-""", null)
-    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'snake', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    // Use the page's Add New Pet link from the owner details page instead of manually constructing the URL.
+    WebUI.waitForElementVisible(findTestObject(repository + 'a_Add New Pet'), 10)
+    WebUI.click(findTestObject(repository + 'a_Add New Pet'))
+    WebUI.waitForPageLoad(10)
 
-    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/?', true)
-    WebUI.verifyTextPresent(firstName + ' ' + lastName, true)
-    WebUI.verifyElementPresent(xpath('redirected owner pet',
-        "//dl[.//dd[normalize-space(.)='" + petName + "']][.//dd[normalize-space(.)='snake']]"), 10)
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_PetName'), 10)
+    WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
+    setDateById('birthDate', birthDate)
+    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), petType, false)
+    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.waitForPageLoad(10)
+
+    String finalUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(finalUrl, '^' + baseUrl + '/owners/' + ownerId + '/?$', true)
+
+    TestObject exactOwnerInfo = xpath('exact owner information',
+        "//h2[normalize-space(.)='Owner Information']/following::table[1]" +
+        "[.//tr[th[normalize-space(.)='Name'] and td/b[normalize-space(.)='" + fullName + "']]]")
+    WebUI.verifyElementPresent(exactOwnerInfo, 10)
+
+    TestObject redirectedOwnerPet = xpath('redirected owner pet',
+        "//h2[normalize-space(.)='Pets and Visits']/following::tr[" +
+        ".//dt[normalize-space(.)='Name']/following-sibling::dd[1][normalize-space(.)='" + petName + "'] and " +
+        ".//dt[normalize-space(.)='Birth Date']/following-sibling::dd[1][normalize-space(.)='" + birthDate + "'] and " +
+        ".//dt[normalize-space(.)='Type']/following-sibling::dd[1][normalize-space(.)='" + petType + "']]")
+    WebUI.verifyElementPresent(redirectedOwnerPet, 10)
+    WebUI.verifyTextPresent(fullName, false)
+    WebUI.verifyTextPresent(petName, false)
+    WebUI.verifyTextPresent(petType, false)
 } finally {
     WebUI.closeBrowser()
 }

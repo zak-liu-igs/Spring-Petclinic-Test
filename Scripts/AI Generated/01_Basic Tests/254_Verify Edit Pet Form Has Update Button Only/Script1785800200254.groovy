@@ -15,6 +15,17 @@ def xpath = { String description, String selector ->
     return object
 }
 
+def buttonByText = { String text ->
+    return xpath('button ' + text, "//button[normalize-space(.)='" + text + "'] | //input[(@type='submit' or @type='button') and @value='" + text + "']")
+}
+
+def getOwnerIdFromCurrentUrl = { ->
+    String currentUrl = WebUI.getUrl()
+    def matcher = currentUrl =~ /\/owners\/(\d+)(?:[;\/?#].*)?$/
+    WebUI.verifyEqual(matcher.find(), true)
+    return matcher.group(1)
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
@@ -23,12 +34,13 @@ try {
     WebUI.setText(findTestObject(repository + 'input_Address'), '254 Update Only Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
-    WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
-    WebUI.verifyEqual(ownerMatcher.find(), true)
-    String ownerId = ownerMatcher.group(1)
+    WebUI.click(buttonByText('Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    String ownerId = getOwnerIdFromCurrentUrl()
 
     WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
+    WebUI.waitForPageLoad(10)
     WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
     WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
@@ -40,20 +52,33 @@ d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
 """, null)
     WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'hamster', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.click(buttonByText('Add Pet'))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
+
+    WebUI.verifyElementPresent(xpath('created pet details',
+        "//dl[.//dd[normalize-space(.)='" + petName + "']]" +
+        "[.//dd[normalize-space(.)='2024-01-01']][.//dd[normalize-space(.)='hamster']]"), 10)
+
     WebUI.click(xpath('edit created pet',
-        "//tr[.//dd[normalize-space(.)='" + petName + "']]//a[normalize-space(.)='Edit Pet']"))
+        "//tr[.//dl[.//dd[normalize-space(.)='" + petName + "']]]//a[normalize-space(.)='Edit Pet']"))
+    WebUI.waitForPageLoad(10)
 
     Number updateButtons = (Number) WebUI.executeJavaScript(
-        "return Array.from(document.querySelectorAll(\"form button[type='submit']\"))" +
-        ".filter(function(b){return b.textContent.trim()==='Update Pet';}).length;", null)
+        "return Array.from(document.querySelectorAll('form button, form input[type=submit], form input[type=button]'))" +
+        ".filter(function(b){return (b.textContent || b.value || '').trim()==='Update Pet';}).length;", null)
     Number addButtons = (Number) WebUI.executeJavaScript(
-        "return Array.from(document.querySelectorAll(\"form button[type='submit']\"))" +
-        ".filter(function(b){return b.textContent.trim()==='Add Pet';}).length;", null)
+        "return Array.from(document.querySelectorAll('form button, form input[type=submit], form input[type=button]'))" +
+        ".filter(function(b){return (b.textContent || b.value || '').trim()==='Add Pet';}).length;", null)
+    Number submitControls = (Number) WebUI.executeJavaScript(
+        "return Array.from(document.querySelectorAll('form button, form input[type=submit]'))" +
+        ".filter(function(b){var t=(b.getAttribute('type') || 'submit').toLowerCase(); return t==='submit';}).length;", null)
+
     WebUI.verifyEqual(updateButtons.intValue(), 1)
     WebUI.verifyEqual(addButtons.intValue(), 0)
+    WebUI.verifyEqual(submitControls.intValue(), 1)
     WebUI.verifyTextPresent('Pet', false)
-    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/pets/\\d+/edit/?', true)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/pets/\\d+/edit(?:[;/?#].*)?$', true)
 } finally {
     WebUI.closeBrowser()
 }

@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Rename a pet without changing its selected type and verify that type remains associated with the renamed pet.</description>
    <name>256_Verify Pet Type Persists When Name Changes</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>1fbb6373-5422-4f0d-8a39-eaf2736ec307</testCaseGuid>
 </TestCaseEntity>

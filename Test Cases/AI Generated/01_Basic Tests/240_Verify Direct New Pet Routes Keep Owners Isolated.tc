@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Create two owners and verify each direct new-pet route displays only the requested owner's context.</description>
    <name>240_Verify Direct New Pet Routes Keep Owners Isolated</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>b63024f4-4604-4010-a179-4dcb0964a313</testCaseGuid>
 </TestCaseEntity>

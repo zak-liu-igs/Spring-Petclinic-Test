@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a unique visit to Max and verify the same record appears when reopening Max's visit form.</description>
    <name>275_Add Visit Then Verify It On New Visit Form History</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>b5d3d46b-0e3f-43bc-b5fc-bff2102e45ff</testCaseGuid>
 </TestCaseEntity>

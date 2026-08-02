@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify that the enabled Next owner-results control targets page two and uses the forward-step icon.</description>
    <name>218_Verify Owner Results Next Pagination Target</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>107d5dd1-b8bc-4671-814e-e089858341f5</testCaseGuid>
 </TestCaseEntity>

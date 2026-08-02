@@ -15,8 +15,18 @@ def xpath = { String description, String selector ->
     return object
 }
 
-TestObject hiddenPetId = new TestObject('edit pet hidden id')
-hiddenPetId.addProperty('css', ConditionType.EQUALS, "form input[name='id'][type='hidden']")
+def buttonByText = { String text ->
+    return xpath('button ' + text, "//button[normalize-space(.)='" + text + "'] | //input[(@type='submit' or @type='button') and @value='" + text + "']")
+}
+
+def getOwnerIdFromCurrentUrl = { ->
+    String currentUrl = WebUI.getUrl()
+    def matcher = currentUrl =~ /\/owners\/(\d+)(?:[;\/?#].*)?$/
+    WebUI.verifyEqual(matcher.find(), true)
+    return matcher.group(1)
+}
+
+TestObject hiddenPetId = xpath('edit pet hidden id', "//form//input[@name='id' and @type='hidden']")
 
 try {
     WebUI.openBrowser('')
@@ -26,12 +36,13 @@ try {
     WebUI.setText(findTestObject(repository + 'input_Address'), '251 Hidden Id Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
-    WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
-    WebUI.verifyEqual(ownerMatcher.find(), true)
-    String ownerId = ownerMatcher.group(1)
+    WebUI.click(buttonByText('Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    String ownerId = getOwnerIdFromCurrentUrl()
 
     WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
+    WebUI.waitForPageLoad(10)
     WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
     WebUI.executeJavaScript("""
 var d = document.getElementById('birthDate');
@@ -43,16 +54,27 @@ d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
 """, null)
     WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'cat', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.click(buttonByText('Add Pet'))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
+
+    TestObject petDetails = xpath('created pet details',
+        "//dl[.//dd[normalize-space(.)='" + petName + "']]" +
+        "[.//dd[normalize-space(.)='2024-01-01']][.//dd[normalize-space(.)='cat']]")
+    WebUI.verifyElementPresent(petDetails, 10)
+
     WebUI.click(xpath('edit created pet',
-        "//tr[.//dd[normalize-space(.)='" + petName + "']]//a[normalize-space(.)='Edit Pet']"))
+        "//tr[.//dl[.//dd[normalize-space(.)='" + petName + "']]]//a[normalize-space(.)='Edit Pet']"))
+    WebUI.waitForPageLoad(10)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/pets/\\d+/edit(?:[;/?#].*)?$', true)
 
     Number hiddenCount = (Number) WebUI.executeJavaScript(
         "return document.querySelectorAll(\"form input[name='id'][type='hidden']\").length;", null)
     String hiddenValue = WebUI.getAttribute(hiddenPetId, 'value')
     WebUI.verifyEqual(hiddenCount.intValue(), 1)
-    WebUI.verifyNotEqual(hiddenValue, '')
-    WebUI.verifyMatch(hiddenValue, '\\d+', true)
+    WebUI.verifyNotEqual(hiddenValue, null)
+    WebUI.verifyNotEqual(hiddenValue.trim(), '')
+    WebUI.verifyMatch(hiddenValue.trim(), '\\d+', true)
     WebUI.verifyElementPresent(hiddenPetId, 10)
 } finally {
     WebUI.closeBrowser()

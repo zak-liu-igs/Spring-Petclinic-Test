@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Edit one pet repeatedly and verify the owner record still contains exactly one pet with only the latest values.</description>
    <name>260_Verify Repeated Pet Edits Do Not Duplicate Pet</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>1011e523-48ba-43ea-bbb3-f8f305033740</testCaseGuid>
 </TestCaseEntity>

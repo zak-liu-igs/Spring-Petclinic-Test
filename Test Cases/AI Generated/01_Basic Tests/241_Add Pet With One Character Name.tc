@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a pet whose valid name contains exactly one character and verify its complete saved details.</description>
    <name>241_Add Pet With One Character Name</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>f67a350c-8c2f-44ac-b654-53c9fa22216c</testCaseGuid>
 </TestCaseEntity>

@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a pet whose name contains meaningful internal spaces and verify those spaces persist.</description>
    <name>243_Add Pet Name With Internal Spaces</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>e7cb2104-f045-4a3b-81ab-e8bc286b2450</testCaseGuid>
 </TestCaseEntity>

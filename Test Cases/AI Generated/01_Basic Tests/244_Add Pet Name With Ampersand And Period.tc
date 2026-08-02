@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a pet name containing an ampersand and period and verify it is stored and rendered exactly.</description>
    <name>244_Add Pet Name With Ampersand And Period</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>dedc367e-9319-4ee1-801c-17ed38bf32e0</testCaseGuid>
 </TestCaseEntity>

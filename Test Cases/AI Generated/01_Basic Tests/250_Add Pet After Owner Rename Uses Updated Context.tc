@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Rename an owner, add a pet, and verify both the new-pet form and saved owner record use the updated name.</description>
    <name>250_Add Pet After Owner Rename Uses Updated Context</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>5f08b35b-cb02-400a-89fe-db9c365f3d79</testCaseGuid>
 </TestCaseEntity>

@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add one pet of each supported type to a single owner and verify all six independent records coexist.</description>
    <name>264_Verify All Six Pet Types Coexist Under One Owner</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>1ead075b-c133-4949-befd-eb7aba946e5f</testCaseGuid>
 </TestCaseEntity>

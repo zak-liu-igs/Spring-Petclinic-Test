@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify the hidden pet identifier on an edit form matches the pet identifier in its owner-scoped route.</description>
    <name>252_Verify Edit Pet Hidden Id Matches Route</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>e2766d46-02e2-414d-842e-fbfd18484cb6</testCaseGuid>
 </TestCaseEntity>

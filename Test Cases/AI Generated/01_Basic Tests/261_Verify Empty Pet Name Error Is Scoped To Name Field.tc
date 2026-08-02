@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Submit an empty pet name and verify the required error and invalid styling are scoped to the name field.</description>
    <name>261_Verify Empty Pet Name Error Is Scoped To Name Field</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>359a47c7-9b4e-48f1-b962-a4413b1925f0</testCaseGuid>
 </TestCaseEntity>

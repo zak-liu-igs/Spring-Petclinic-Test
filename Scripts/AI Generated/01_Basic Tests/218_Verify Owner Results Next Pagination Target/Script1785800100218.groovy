@@ -10,16 +10,32 @@ def xpath = { String name, String expression ->
     object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners?lastName=')
+    WebUI.waitForPageLoad(10)
 
-    TestObject nextPage = xpath('nextOwnerPage', "//a[@title='Next']")
+    // Current PetClinic renders owner pagination with lowercase "pages" and the Next control as:
+    // <a class="fa fa-step-forward" href="/owners?page=2" title="Next"></a>
+    // The icon class is on the anchor itself, not on a child <span>, and the empty lastName query is omitted.
+    TestObject paginationContainer = xpath('ownerPaginationContainer',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages'] and .//a[@title='Next']]")
+    TestObject nextPage = xpath('nextOwnerPage',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages']]//a[@title='Next']")
+    TestObject nextPageIcon = xpath('nextPageIcon',
+        "//div[.//span[translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ:', 'abcdefghijklmnopqrstuvwxyz')='pages']]" +
+        "//a[@title='Next' and contains(concat(' ', normalize-space(@class), ' '), ' fa-step-forward ')]")
+
+    WebUI.verifyElementPresent(paginationContainer, 10)
     WebUI.verifyElementVisible(nextPage)
-    WebUI.verifyMatch(WebUI.getAttribute(nextPage, 'href'),
-        '^http://localhost:8080/owners\\?page=2$', true)
-    WebUI.verifyElementPresent(xpath('nextPageIcon',
-        "//a[@title='Next']/span[contains(concat(' ', normalize-space(@class), ' '), ' fa-step-forward ')]"), 10)
+
+    String nextHref = normalizeUrl(WebUI.getAttribute(nextPage, 'href'))
+    WebUI.verifyMatch(nextHref, '^' + baseUrl + '/owners\\?page=2$', true)
+    WebUI.verifyElementPresent(nextPageIcon, 10)
 } finally {
     WebUI.closeBrowser()
 }

@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Rename a pet, refresh the resulting owner page, and verify only the new name remains.</description>
    <name>257_Verify Renamed Pet Persists After Refresh</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>69921af5-fcf2-496e-90bb-8a34fa87f9a9</testCaseGuid>
 </TestCaseEntity>

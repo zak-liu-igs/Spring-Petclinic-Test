@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Change a pet's type, leave the owner page, revisit it directly, and verify only the updated type is associated.</description>
    <name>258_Verify Updated Pet Type Persists After Direct Revisit</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>cee12af4-9b5b-4bb9-9b56-0f5c50f571b6</testCaseGuid>
 </TestCaseEntity>

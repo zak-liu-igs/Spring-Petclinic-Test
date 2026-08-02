@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add same-named pets to two owners, edit one pet's type, and verify the other owner's pet remains unchanged.</description>
    <name>266_Verify Same Named Pets Stay Independent After Edit</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>ea6f651f-4bd9-430a-99e7-814b968b48c5</testCaseGuid>
 </TestCaseEntity>

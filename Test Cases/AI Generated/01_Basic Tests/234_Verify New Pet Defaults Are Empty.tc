@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Verify a dynamically created owner's new-pet form starts with empty name, birth date, and pet identifier values.</description>
    <name>234_Verify New Pet Defaults Are Empty</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>6837075e-a9a7-428e-8a32-fc2fe4df56cc</testCaseGuid>
 </TestCaseEntity>

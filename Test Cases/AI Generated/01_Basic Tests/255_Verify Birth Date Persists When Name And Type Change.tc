@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Change a pet's name and type without editing its birth date and verify the original date remains persisted.</description>
    <name>255_Verify Birth Date Persists When Name And Type Change</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>6e8e6cee-a57e-4ed5-a025-d1404c7b7b47</testCaseGuid>
 </TestCaseEntity>

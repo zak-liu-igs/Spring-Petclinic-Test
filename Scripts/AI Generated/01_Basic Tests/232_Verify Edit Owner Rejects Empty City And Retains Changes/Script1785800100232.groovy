@@ -5,6 +5,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 String baseUrl = 'http://localhost:8080'
+String repository = 'Page_PetClinic  a Spring Framework demonstration/'
 String token = String.valueOf(System.currentTimeMillis())
 String firstName = 'EditCity' + token.substring(token.length() - 5)
 String lastName = 'Required' + token.substring(token.length() - 6)
@@ -17,38 +18,61 @@ def xpath = { String name, String expression ->
     object
 }
 
+def normalizeUrl = { String url ->
+    url.replaceFirst(';jsessionid=[^/?#]+', '')
+}
+
 def createOwner = {
     WebUI.navigateToUrl(baseUrl + '/owners/new')
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_First Name'), firstName)
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Last Name'), lastName)
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Address'), '232 Original Road')
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_City'), 'Original City')
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Telephone'),
-        token.substring(token.length() - 10))
-    WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_First Name'), 10)
+    WebUI.setText(findTestObject(repository + 'input_First Name'), firstName)
+    WebUI.setText(findTestObject(repository + 'input_Last Name'), lastName)
+    WebUI.setText(findTestObject(repository + 'input_Address'), '232 Original Road')
+    WebUI.setText(findTestObject(repository + 'input_City'), 'Original City')
+    WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
+    WebUI.click(findTestObject(repository + 'button_Add Owner'))
+    WebUI.waitForPageLoad(10)
 }
 
 try {
     WebUI.openBrowser('')
     createOwner()
-    String ownerId = WebUI.getUrl().substring(WebUI.getUrl().lastIndexOf('/') + 1)
-    WebUI.click(xpath('editOwner', "//a[normalize-space(.)='Edit Owner']"))
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Address'), newAddress)
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_City'), '')
-    WebUI.setText(findTestObject('Page_PetClinic  a Spring Framework demonstration/input_Telephone'), newTelephone)
-    WebUI.click(findTestObject('Page_PetClinic  a Spring Framework demonstration/button_Update Owner'))
 
-    WebUI.verifyElementPresent(xpath('cityError',
-        "//*[@id='city']/ancestor::div[contains(@class,'form-group')][1]" +
-        "//*[contains(@class,'help-inline') and normalize-space(.)!='']"), 10)
-    WebUI.verifyElementAttributeValue(findTestObject(
-        'Page_PetClinic  a Spring Framework demonstration/input_Address'), 'value', newAddress, 10)
-    WebUI.verifyElementAttributeValue(findTestObject(
-        'Page_PetClinic  a Spring Framework demonstration/input_City'), 'value', '', 10)
-    WebUI.verifyElementAttributeValue(findTestObject(
-        'Page_PetClinic  a Spring Framework demonstration/input_Telephone'), 'value', newTelephone, 10)
-    WebUI.verifyMatch(WebUI.getUrl(),
-        '^http://localhost:8080/owners/' + ownerId + '/edit$', true)
+    // PetClinic may append optional ;jsessionid=... path parameters. Normalize before extracting owner id.
+    String ownerUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(ownerUrl, '^' + baseUrl + '/owners/\\d+/?$', true)
+    String ownerId = (ownerUrl =~ /\/owners\/(\d+)\/?$/)[0][1]
+
+    TestObject editOwner = xpath('editOwner', "//a[normalize-space(.)='Edit Owner']")
+    WebUI.waitForElementClickable(editOwner, 10)
+    WebUI.click(editOwner)
+    WebUI.waitForPageLoad(10)
+
+    WebUI.waitForElementVisible(findTestObject(repository + 'input_Address'), 10)
+    WebUI.setText(findTestObject(repository + 'input_Address'), newAddress)
+    WebUI.clearText(findTestObject(repository + 'input_City'))
+    WebUI.setText(findTestObject(repository + 'input_Telephone'), newTelephone)
+    WebUI.click(findTestObject(repository + 'button_Update Owner'))
+    WebUI.waitForPageLoad(10)
+
+    TestObject cityError = xpath('cityError',
+        "//*[@id='city']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' col-sm-10 ')][1]" +
+        "//*[self::span or self::div][normalize-space(.)!='' and " +
+        "(contains(concat(' ', normalize-space(@class), ' '), ' help-inline ') or " +
+        " contains(concat(' ', normalize-space(@class), ' '), ' invalid-feedback ') or " +
+        " contains(concat(' ', normalize-space(@class), ' '), ' text-danger '))]")
+
+    WebUI.verifyElementPresent(cityError, 10)
+    WebUI.verifyMatch(WebUI.getText(cityError).trim(), '.*(must not be blank|must not be empty|required).*', true)
+
+    WebUI.verifyElementAttributeValue(findTestObject(repository + 'input_Address'), 'value', newAddress, 10)
+    WebUI.verifyElementAttributeValue(findTestObject(repository + 'input_City'), 'value', '', 10)
+    WebUI.verifyElementAttributeValue(findTestObject(repository + 'input_Telephone'), 'value', newTelephone, 10)
+
+    String editUrl = normalizeUrl(WebUI.getUrl())
+    WebUI.verifyMatch(editUrl, '^' + baseUrl + '/owners/' + ownerId + '/edit/?$', true)
 } finally {
     WebUI.closeBrowser()
 }

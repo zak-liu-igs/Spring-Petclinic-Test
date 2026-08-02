@@ -15,6 +15,17 @@ def xpath = { String description, String selector ->
     return object
 }
 
+def buttonByText = { String text ->
+    return xpath('button ' + text, "//button[normalize-space(.)='" + text + "'] | //input[(@type='submit' or @type='button') and @value='" + text + "']")
+}
+
+def getOwnerIdFromCurrentUrl = { ->
+    String currentUrl = WebUI.getUrl()
+    def matcher = currentUrl =~ /\/owners\/(\d+)(?:[;\/?#].*)?$/
+    WebUI.verifyEqual(matcher.find(), true)
+    return matcher.group(1)
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl + '/owners/new')
@@ -23,10 +34,10 @@ try {
     WebUI.setText(findTestObject(repository + 'input_Address'), '247 Refresh Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
-    WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
-    WebUI.verifyEqual(ownerMatcher.find(), true)
-    String ownerId = ownerMatcher.group(1)
+    WebUI.click(buttonByText('Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    String ownerId = getOwnerIdFromCurrentUrl()
 
     WebUI.navigateToUrl(baseUrl + '/owners/' + ownerId + '/pets/new')
     WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
@@ -40,7 +51,10 @@ d.dispatchEvent(new Event('input', {bubbles:true}));
 d.dispatchEvent(new Event('change', {bubbles:true}));
 """, null)
     WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'hamster', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.click(buttonByText('Add Pet'))
+    WebUI.waitForPageLoad(10)
+
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
 
     TestObject petDetails = xpath('persistent pet details',
         "//dl[.//dd[normalize-space(.)='" + petName + "']]" +
@@ -48,7 +62,7 @@ d.dispatchEvent(new Event('change', {bubbles:true}));
     WebUI.verifyElementPresent(petDetails, 10)
     WebUI.refresh()
     WebUI.waitForPageLoad(10)
-    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '/?', true)
+    WebUI.verifyMatch(WebUI.getUrl(), baseUrl + '/owners/' + ownerId + '(?:[;/?#].*)?$', true)
     WebUI.verifyElementPresent(petDetails, 10)
     WebUI.verifyTextPresent(petName, true)
 } finally {

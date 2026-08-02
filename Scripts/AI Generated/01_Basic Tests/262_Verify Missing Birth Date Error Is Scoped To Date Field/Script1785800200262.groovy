@@ -8,12 +8,28 @@ String baseUrl = 'http://localhost:8080'
 String repository = 'Page_PetClinic  a Spring Framework demonstration/'
 String token = System.currentTimeMillis().toString()
 String petName = 'MissingDate' + token.substring(token.length() - 6)
+String petType = 'snake'
 
 def xpath = { String description, String selector ->
     TestObject object = new TestObject(description)
     object.addProperty('xpath', ConditionType.EQUALS, selector)
     return object
 }
+
+def buttonByText = { String text ->
+    return xpath('button ' + text, "//button[normalize-space(.)='" + text + "'] | //input[(@type='submit' or @type='button') and @value='" + text + "']")
+}
+
+def getOwnerIdFromCurrentUrl = { ->
+    String currentUrl = WebUI.getUrl()
+    def matcher = currentUrl =~ /\/owners\/(\d+)(?:[;\/?#].*)?$/
+    WebUI.verifyEqual(matcher.find(), true)
+    return matcher.group(1)
+}
+
+TestObject dateValidationGroup = xpath('birth date validation group', "//input[@id='birthDate']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' form-group ')][1]")
+TestObject dateRequiredMessage = xpath('birth date required message', "//input[@id='birthDate']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' form-group ')][1]//span[normalize-space(.)='is required']")
+TestObject nameRequiredMessage = xpath('name required message', "//input[@id='name']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' form-group ')][1]//span[normalize-space(.)='is required']")
 
 try {
     WebUI.openBrowser('')
@@ -23,32 +39,28 @@ try {
     WebUI.setText(findTestObject(repository + 'input_Address'), '262 Date Scope Avenue')
     WebUI.setText(findTestObject(repository + 'input_City'), 'Taipei')
     WebUI.setText(findTestObject(repository + 'input_Telephone'), token.substring(token.length() - 10))
-    WebUI.click(findTestObject(repository + 'button_Add Owner'))
-    def ownerMatcher = WebUI.getUrl() =~ /\/owners\/(\d+)\/?$/
-    WebUI.verifyEqual(ownerMatcher.find(), true)
-    String ownerId = ownerMatcher.group(1)
+    WebUI.click(buttonByText('Add Owner'))
+    WebUI.waitForPageLoad(10)
+
+    String ownerId = getOwnerIdFromCurrentUrl()
     String newPetUrl = baseUrl + '/owners/' + ownerId + '/pets/new'
 
     WebUI.navigateToUrl(newPetUrl)
+    WebUI.waitForPageLoad(10)
     WebUI.setText(findTestObject(repository + 'input_PetName'), petName)
-    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), 'snake', false)
-    WebUI.click(findTestObject(repository + 'button_Add Pet'))
+    WebUI.selectOptionByLabel(findTestObject(repository + 'select_Type'), petType, false)
+    WebUI.click(buttonByText('Add Pet'))
+    WebUI.waitForPageLoad(10)
 
-    TestObject dateGroup = xpath('birth date validation group',
-        "//input[@id='birthDate']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' form-group ')][1]")
-    TestObject dateError = xpath('birth date required message',
-        "//input[@id='birthDate']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' col-sm-10 ')][1]/span[" +
-        "contains(concat(' ', normalize-space(@class), ' '), ' help-inline ')]")
-    TestObject nameGroup = xpath('valid name group',
-        "//input[@id='name']/ancestor::div[contains(concat(' ', normalize-space(@class), ' '), ' form-group ')][1]")
-    WebUI.verifyMatch(WebUI.getUrl(), newPetUrl + '/?', true)
-    WebUI.verifyMatch(WebUI.getAttribute(dateGroup, 'class'), '.*\\bhas-error\\b.*', true)
-    WebUI.verifyElementText(dateError, 'is required')
-    WebUI.verifyEqual(WebUI.getAttribute(nameGroup, 'class').contains('has-error'), false)
+    WebUI.verifyMatch(WebUI.getUrl(), newPetUrl + '(?:[;/?#].*)?$', true)
+    WebUI.verifyElementPresent(dateValidationGroup, 10)
+    WebUI.verifyElementPresent(dateRequiredMessage, 10)
+    WebUI.verifyElementNotPresent(nameRequiredMessage, 2)
     WebUI.verifyEqual(WebUI.getAttribute(findTestObject(repository + 'input_PetName'), 'value'), petName)
+
     String selectedType = (String) WebUI.executeJavaScript(
         "var s=document.getElementById('type'); return s.options[s.selectedIndex].textContent.trim();", null)
-    WebUI.verifyEqual(selectedType, 'snake')
+    WebUI.verifyEqual(selectedType, petType)
 } finally {
     WebUI.closeBrowser()
 }

@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Add a pet, refresh the owner page, and verify its name, birth date, and type remain persisted.</description>
    <name>247_Verify Added Pet Persists After Refresh</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>5932ed80-813f-4b6d-a117-7671df2349be</testCaseGuid>
 </TestCaseEntity>

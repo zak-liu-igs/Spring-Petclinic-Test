@@ -2,7 +2,8 @@
 <TestCaseEntity>
    <description>Edit the same pet twice and verify its route and hidden identifier remain stable across both updates.</description>
    <name>259_Verify Repeated Pet Edits Preserve Identifier</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>c6b3214b-6744-4601-bbcb-3dad944e599f</testCaseGuid>
 </TestCaseEntity>
