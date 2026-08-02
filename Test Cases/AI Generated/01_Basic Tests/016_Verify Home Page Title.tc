@@ -3,6 +3,13 @@
    <description>Verify the Spring Petclinic home page title.</description>
    <name>016_Verify Home Page Title</name>
    <tag>GenAI</tag>
+   <testDataLink>
+      <guid>3a1b0f1d-09d1-46c5-b180-1e1a6a1f973f</guid>
+      <isInternalPath>true</isInternalPath>
+      <name>HomePageData_001_1000.csv</name>
+      <path>Data Files/HomePageData_001_1000.csv</path>
+      <type>CSV</type>
+   </testDataLink>
    <comment></comment>
    <origin>STUDIOASSIST</origin>
    <recordOption>OTHER</recordOption>
