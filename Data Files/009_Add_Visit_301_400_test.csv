@@ -1,0 +1,101 @@
+﻿id,case_name,url,owner_id,pet_id,visit_date,description,expected_text,scenario_type,expected_result
+301,AddVisit_Case_301,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-01,Annual health check - TC301,Annual health check - TC301,vaccination,success
+302,AddVisit_Case_302,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-02,Vaccination follow-up - TC302,Vaccination follow-up - TC302,specialist_review,success
+303,AddVisit_Case_303,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-03,Dental examination - TC303,Dental examination - TC303,follow_up,success
+304,AddVisit_Case_304,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-04,Skin condition review - TC304,Skin condition review - TC304,routine_visit,success
+305,AddVisit_Case_305,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-05,Nutrition consultation - TC305,Nutrition consultation - TC305,vaccination,success
+306,AddVisit_Case_306,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-06,Post-surgery review - TC306,Post-surgery review - TC306,specialist_review,success
+307,AddVisit_Case_307,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-07,Routine blood test - TC307,Routine blood test - TC307,follow_up,success
+308,AddVisit_Case_308,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-08,Mobility assessment - TC308,Mobility assessment - TC308,routine_visit,success
+309,AddVisit_Case_309,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-09,Eye examination - TC309,Eye examination - TC309,vaccination,success
+310,AddVisit_Case_310,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-10,Medication follow-up - TC310,Medication follow-up - TC310,specialist_review,success
+311,AddVisit_Case_311,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-11,Annual health check - TC311,Annual health check - TC311,follow_up,success
+312,AddVisit_Case_312,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-12,Vaccination follow-up - TC312,Vaccination follow-up - TC312,routine_visit,success
+313,AddVisit_Case_313,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-13,Dental examination - TC313,Dental examination - TC313,vaccination,success
+314,AddVisit_Case_314,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-14,Skin condition review - TC314,Skin condition review - TC314,specialist_review,success
+315,AddVisit_Case_315,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-15,Nutrition consultation - TC315,Nutrition consultation - TC315,follow_up,success
+316,AddVisit_Case_316,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-16,Post-surgery review - TC316,Post-surgery review - TC316,routine_visit,success
+317,AddVisit_Case_317,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-17,Routine blood test - TC317,Routine blood test - TC317,vaccination,success
+318,AddVisit_Case_318,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-18,Mobility assessment - TC318,Mobility assessment - TC318,specialist_review,success
+319,AddVisit_Case_319,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-19,Eye examination - TC319,Eye examination - TC319,follow_up,success
+320,AddVisit_Case_320,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-20,Medication follow-up - TC320,Medication follow-up - TC320,routine_visit,success
+321,AddVisit_Case_321,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-21,Annual health check - TC321,Annual health check - TC321,vaccination,success
+322,AddVisit_Case_322,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-22,Vaccination follow-up - TC322,Vaccination follow-up - TC322,specialist_review,success
+323,AddVisit_Case_323,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-23,Dental examination - TC323,Dental examination - TC323,follow_up,success
+324,AddVisit_Case_324,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-24,Skin condition review - TC324,Skin condition review - TC324,routine_visit,success
+325,AddVisit_Case_325,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-25,Nutrition consultation - TC325,Nutrition consultation - TC325,vaccination,success
+326,AddVisit_Case_326,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-26,Post-surgery review - TC326,Post-surgery review - TC326,specialist_review,success
+327,AddVisit_Case_327,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-27,Routine blood test - TC327,Routine blood test - TC327,follow_up,success
+328,AddVisit_Case_328,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-28,Mobility assessment - TC328,Mobility assessment - TC328,routine_visit,success
+329,AddVisit_Case_329,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-29,Eye examination - TC329,Eye examination - TC329,vaccination,success
+330,AddVisit_Case_330,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-30,Medication follow-up - TC330,Medication follow-up - TC330,specialist_review,success
+331,AddVisit_Case_331,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-01-31,Annual health check - TC331,Annual health check - TC331,follow_up,success
+332,AddVisit_Case_332,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-01,Vaccination follow-up - TC332,Vaccination follow-up - TC332,routine_visit,success
+333,AddVisit_Case_333,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-02,Dental examination - TC333,Dental examination - TC333,vaccination,success
+334,AddVisit_Case_334,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-03,Skin condition review - TC334,Skin condition review - TC334,specialist_review,success
+335,AddVisit_Case_335,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-04,Nutrition consultation - TC335,Nutrition consultation - TC335,follow_up,success
+336,AddVisit_Case_336,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-05,Post-surgery review - TC336,Post-surgery review - TC336,routine_visit,success
+337,AddVisit_Case_337,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-06,Routine blood test - TC337,Routine blood test - TC337,vaccination,success
+338,AddVisit_Case_338,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-07,Mobility assessment - TC338,Mobility assessment - TC338,specialist_review,success
+339,AddVisit_Case_339,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-08,Eye examination - TC339,Eye examination - TC339,follow_up,success
+340,AddVisit_Case_340,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-09,Medication follow-up - TC340,Medication follow-up - TC340,routine_visit,success
+341,AddVisit_Case_341,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-10,Annual health check - TC341,Annual health check - TC341,vaccination,success
+342,AddVisit_Case_342,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-11,Vaccination follow-up - TC342,Vaccination follow-up - TC342,specialist_review,success
+343,AddVisit_Case_343,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-12,Dental examination - TC343,Dental examination - TC343,follow_up,success
+344,AddVisit_Case_344,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-13,Skin condition review - TC344,Skin condition review - TC344,routine_visit,success
+345,AddVisit_Case_345,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-14,Nutrition consultation - TC345,Nutrition consultation - TC345,vaccination,success
+346,AddVisit_Case_346,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-15,Post-surgery review - TC346,Post-surgery review - TC346,specialist_review,success
+347,AddVisit_Case_347,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-16,Routine blood test - TC347,Routine blood test - TC347,follow_up,success
+348,AddVisit_Case_348,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-17,Mobility assessment - TC348,Mobility assessment - TC348,routine_visit,success
+349,AddVisit_Case_349,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-18,Eye examination - TC349,Eye examination - TC349,vaccination,success
+350,AddVisit_Case_350,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-19,Medication follow-up - TC350,Medication follow-up - TC350,specialist_review,success
+351,AddVisit_Case_351,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-20,Annual health check - TC351,Annual health check - TC351,follow_up,success
+352,AddVisit_Case_352,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-21,Vaccination follow-up - TC352,Vaccination follow-up - TC352,routine_visit,success
+353,AddVisit_Case_353,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-22,Dental examination - TC353,Dental examination - TC353,vaccination,success
+354,AddVisit_Case_354,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-23,Skin condition review - TC354,Skin condition review - TC354,specialist_review,success
+355,AddVisit_Case_355,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-24,Nutrition consultation - TC355,Nutrition consultation - TC355,follow_up,success
+356,AddVisit_Case_356,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-25,Post-surgery review - TC356,Post-surgery review - TC356,routine_visit,success
+357,AddVisit_Case_357,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-26,Routine blood test - TC357,Routine blood test - TC357,vaccination,success
+358,AddVisit_Case_358,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-27,Mobility assessment - TC358,Mobility assessment - TC358,specialist_review,success
+359,AddVisit_Case_359,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-02-28,Eye examination - TC359,Eye examination - TC359,follow_up,success
+360,AddVisit_Case_360,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-01,Medication follow-up - TC360,Medication follow-up - TC360,routine_visit,success
+361,AddVisit_Case_361,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-02,Annual health check - TC361,Annual health check - TC361,vaccination,success
+362,AddVisit_Case_362,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-03,Vaccination follow-up - TC362,Vaccination follow-up - TC362,specialist_review,success
+363,AddVisit_Case_363,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-04,Dental examination - TC363,Dental examination - TC363,follow_up,success
+364,AddVisit_Case_364,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-05,Skin condition review - TC364,Skin condition review - TC364,routine_visit,success
+365,AddVisit_Case_365,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-06,Nutrition consultation - TC365,Nutrition consultation - TC365,vaccination,success
+366,AddVisit_Case_366,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-07,Post-surgery review - TC366,Post-surgery review - TC366,specialist_review,success
+367,AddVisit_Case_367,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-08,Routine blood test - TC367,Routine blood test - TC367,follow_up,success
+368,AddVisit_Case_368,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-09,Mobility assessment - TC368,Mobility assessment - TC368,routine_visit,success
+369,AddVisit_Case_369,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-10,Eye examination - TC369,Eye examination - TC369,vaccination,success
+370,AddVisit_Case_370,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-11,Medication follow-up - TC370,Medication follow-up - TC370,specialist_review,success
+371,AddVisit_Case_371,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-12,Annual health check - TC371,Annual health check - TC371,follow_up,success
+372,AddVisit_Case_372,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-13,Vaccination follow-up - TC372,Vaccination follow-up - TC372,routine_visit,success
+373,AddVisit_Case_373,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-14,Dental examination - TC373,Dental examination - TC373,vaccination,success
+374,AddVisit_Case_374,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-15,Skin condition review - TC374,Skin condition review - TC374,specialist_review,success
+375,AddVisit_Case_375,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-16,Nutrition consultation - TC375,Nutrition consultation - TC375,follow_up,success
+376,AddVisit_Case_376,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-17,Post-surgery review - TC376,Post-surgery review - TC376,routine_visit,success
+377,AddVisit_Case_377,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-18,Routine blood test - TC377,Routine blood test - TC377,vaccination,success
+378,AddVisit_Case_378,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-19,Mobility assessment - TC378,Mobility assessment - TC378,specialist_review,success
+379,AddVisit_Case_379,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-20,Eye examination - TC379,Eye examination - TC379,follow_up,success
+380,AddVisit_Case_380,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-21,Medication follow-up - TC380,Medication follow-up - TC380,routine_visit,success
+381,AddVisit_Case_381,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-22,Annual health check - TC381,Annual health check - TC381,vaccination,success
+382,AddVisit_Case_382,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-23,Vaccination follow-up - TC382,Vaccination follow-up - TC382,specialist_review,success
+383,AddVisit_Case_383,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-24,Dental examination - TC383,Dental examination - TC383,follow_up,success
+384,AddVisit_Case_384,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-25,Skin condition review - TC384,Skin condition review - TC384,routine_visit,success
+385,AddVisit_Case_385,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-26,Nutrition consultation - TC385,Nutrition consultation - TC385,vaccination,success
+386,AddVisit_Case_386,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-27,Post-surgery review - TC386,Post-surgery review - TC386,specialist_review,success
+387,AddVisit_Case_387,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-28,Routine blood test - TC387,Routine blood test - TC387,follow_up,success
+388,AddVisit_Case_388,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-29,Mobility assessment - TC388,Mobility assessment - TC388,routine_visit,success
+389,AddVisit_Case_389,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-30,Eye examination - TC389,Eye examination - TC389,vaccination,success
+390,AddVisit_Case_390,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-03-31,Medication follow-up - TC390,Medication follow-up - TC390,specialist_review,success
+391,AddVisit_Case_391,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-01,Annual health check - TC391,Annual health check - TC391,follow_up,success
+392,AddVisit_Case_392,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-02,Vaccination follow-up - TC392,Vaccination follow-up - TC392,routine_visit,success
+393,AddVisit_Case_393,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-03,Dental examination - TC393,Dental examination - TC393,vaccination,success
+394,AddVisit_Case_394,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-04,Skin condition review - TC394,Skin condition review - TC394,specialist_review,success
+395,AddVisit_Case_395,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-05,Nutrition consultation - TC395,Nutrition consultation - TC395,follow_up,success
+396,AddVisit_Case_396,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-06,Post-surgery review - TC396,Post-surgery review - TC396,routine_visit,success
+397,AddVisit_Case_397,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-07,Routine blood test - TC397,Routine blood test - TC397,vaccination,success
+398,AddVisit_Case_398,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-08,Mobility assessment - TC398,Mobility assessment - TC398,specialist_review,success
+399,AddVisit_Case_399,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-09,Eye examination - TC399,Eye examination - TC399,follow_up,success
+400,AddVisit_Case_400,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2027-04-10,Medication follow-up - TC400,Medication follow-up - TC400,routine_visit,success

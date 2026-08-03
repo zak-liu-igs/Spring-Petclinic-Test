@@ -1,0 +1,101 @@
+id,case_name,url,owner_id,pet_id,visit_date,description,invalid_field,expected_error_key,scenario_type,expected_result
+801,AddVisitValidation_Case_801,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-01,Past visit validation 801,date,future_date,past_date,validation_error
+802,AddVisitValidation_Case_802,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-02,Old visit validation 802,date,future_date,old_date,validation_error
+803,AddVisitValidation_Case_803,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-03,,description,required,blank_description,validation_error
+804,AddVisitValidation_Case_804,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-04,   ,description,required,spaces_description,validation_error
+805,AddVisitValidation_Case_805,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-05,Past visit validation 805,date,future_date,past_date,validation_error
+806,AddVisitValidation_Case_806,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-06,Old visit validation 806,date,future_date,old_date,validation_error
+807,AddVisitValidation_Case_807,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-07,,description,required,blank_description,validation_error
+808,AddVisitValidation_Case_808,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-08,   ,description,required,spaces_description,validation_error
+809,AddVisitValidation_Case_809,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-09,Past visit validation 809,date,future_date,past_date,validation_error
+810,AddVisitValidation_Case_810,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-10,Old visit validation 810,date,future_date,old_date,validation_error
+811,AddVisitValidation_Case_811,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-11,,description,required,blank_description,validation_error
+812,AddVisitValidation_Case_812,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-12,   ,description,required,spaces_description,validation_error
+813,AddVisitValidation_Case_813,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-13,Past visit validation 813,date,future_date,past_date,validation_error
+814,AddVisitValidation_Case_814,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-14,Old visit validation 814,date,future_date,old_date,validation_error
+815,AddVisitValidation_Case_815,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-15,,description,required,blank_description,validation_error
+816,AddVisitValidation_Case_816,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-16,   ,description,required,spaces_description,validation_error
+817,AddVisitValidation_Case_817,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-17,Past visit validation 817,date,future_date,past_date,validation_error
+818,AddVisitValidation_Case_818,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-18,Old visit validation 818,date,future_date,old_date,validation_error
+819,AddVisitValidation_Case_819,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-19,,description,required,blank_description,validation_error
+820,AddVisitValidation_Case_820,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-20,   ,description,required,spaces_description,validation_error
+821,AddVisitValidation_Case_821,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-21,Past visit validation 821,date,future_date,past_date,validation_error
+822,AddVisitValidation_Case_822,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-22,Old visit validation 822,date,future_date,old_date,validation_error
+823,AddVisitValidation_Case_823,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-23,,description,required,blank_description,validation_error
+824,AddVisitValidation_Case_824,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-24,   ,description,required,spaces_description,validation_error
+825,AddVisitValidation_Case_825,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-25,Past visit validation 825,date,future_date,past_date,validation_error
+826,AddVisitValidation_Case_826,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-26,Old visit validation 826,date,future_date,old_date,validation_error
+827,AddVisitValidation_Case_827,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-27,,description,required,blank_description,validation_error
+828,AddVisitValidation_Case_828,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-28,   ,description,required,spaces_description,validation_error
+829,AddVisitValidation_Case_829,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-01-29,Past visit validation 829,date,future_date,past_date,validation_error
+830,AddVisitValidation_Case_830,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-01-30,Old visit validation 830,date,future_date,old_date,validation_error
+831,AddVisitValidation_Case_831,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-01-31,,description,required,blank_description,validation_error
+832,AddVisitValidation_Case_832,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-01,   ,description,required,spaces_description,validation_error
+833,AddVisitValidation_Case_833,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-02,Past visit validation 833,date,future_date,past_date,validation_error
+834,AddVisitValidation_Case_834,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-03,Old visit validation 834,date,future_date,old_date,validation_error
+835,AddVisitValidation_Case_835,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-04,,description,required,blank_description,validation_error
+836,AddVisitValidation_Case_836,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-05,   ,description,required,spaces_description,validation_error
+837,AddVisitValidation_Case_837,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-06,Past visit validation 837,date,future_date,past_date,validation_error
+838,AddVisitValidation_Case_838,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-07,Old visit validation 838,date,future_date,old_date,validation_error
+839,AddVisitValidation_Case_839,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-08,,description,required,blank_description,validation_error
+840,AddVisitValidation_Case_840,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-09,   ,description,required,spaces_description,validation_error
+841,AddVisitValidation_Case_841,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-10,Past visit validation 841,date,future_date,past_date,validation_error
+842,AddVisitValidation_Case_842,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-11,Old visit validation 842,date,future_date,old_date,validation_error
+843,AddVisitValidation_Case_843,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-12,,description,required,blank_description,validation_error
+844,AddVisitValidation_Case_844,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-13,   ,description,required,spaces_description,validation_error
+845,AddVisitValidation_Case_845,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-14,Past visit validation 845,date,future_date,past_date,validation_error
+846,AddVisitValidation_Case_846,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-15,Old visit validation 846,date,future_date,old_date,validation_error
+847,AddVisitValidation_Case_847,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-16,,description,required,blank_description,validation_error
+848,AddVisitValidation_Case_848,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-17,   ,description,required,spaces_description,validation_error
+849,AddVisitValidation_Case_849,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-18,Past visit validation 849,date,future_date,past_date,validation_error
+850,AddVisitValidation_Case_850,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-19,Old visit validation 850,date,future_date,old_date,validation_error
+851,AddVisitValidation_Case_851,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-20,,description,required,blank_description,validation_error
+852,AddVisitValidation_Case_852,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-21,   ,description,required,spaces_description,validation_error
+853,AddVisitValidation_Case_853,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-22,Past visit validation 853,date,future_date,past_date,validation_error
+854,AddVisitValidation_Case_854,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-23,Old visit validation 854,date,future_date,old_date,validation_error
+855,AddVisitValidation_Case_855,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-24,,description,required,blank_description,validation_error
+856,AddVisitValidation_Case_856,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-25,   ,description,required,spaces_description,validation_error
+857,AddVisitValidation_Case_857,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-02-26,Past visit validation 857,date,future_date,past_date,validation_error
+858,AddVisitValidation_Case_858,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-02-27,Old visit validation 858,date,future_date,old_date,validation_error
+859,AddVisitValidation_Case_859,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-02-28,,description,required,blank_description,validation_error
+860,AddVisitValidation_Case_860,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-01,   ,description,required,spaces_description,validation_error
+861,AddVisitValidation_Case_861,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-01,Past visit validation 861,date,future_date,past_date,validation_error
+862,AddVisitValidation_Case_862,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-03,Old visit validation 862,date,future_date,old_date,validation_error
+863,AddVisitValidation_Case_863,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-04,,description,required,blank_description,validation_error
+864,AddVisitValidation_Case_864,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-05,   ,description,required,spaces_description,validation_error
+865,AddVisitValidation_Case_865,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-05,Past visit validation 865,date,future_date,past_date,validation_error
+866,AddVisitValidation_Case_866,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-07,Old visit validation 866,date,future_date,old_date,validation_error
+867,AddVisitValidation_Case_867,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-08,,description,required,blank_description,validation_error
+868,AddVisitValidation_Case_868,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-09,   ,description,required,spaces_description,validation_error
+869,AddVisitValidation_Case_869,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-09,Past visit validation 869,date,future_date,past_date,validation_error
+870,AddVisitValidation_Case_870,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-11,Old visit validation 870,date,future_date,old_date,validation_error
+871,AddVisitValidation_Case_871,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-12,,description,required,blank_description,validation_error
+872,AddVisitValidation_Case_872,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-13,   ,description,required,spaces_description,validation_error
+873,AddVisitValidation_Case_873,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-13,Past visit validation 873,date,future_date,past_date,validation_error
+874,AddVisitValidation_Case_874,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-15,Old visit validation 874,date,future_date,old_date,validation_error
+875,AddVisitValidation_Case_875,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-16,,description,required,blank_description,validation_error
+876,AddVisitValidation_Case_876,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-17,   ,description,required,spaces_description,validation_error
+877,AddVisitValidation_Case_877,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-17,Past visit validation 877,date,future_date,past_date,validation_error
+878,AddVisitValidation_Case_878,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-19,Old visit validation 878,date,future_date,old_date,validation_error
+879,AddVisitValidation_Case_879,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-20,,description,required,blank_description,validation_error
+880,AddVisitValidation_Case_880,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-21,   ,description,required,spaces_description,validation_error
+881,AddVisitValidation_Case_881,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-21,Past visit validation 881,date,future_date,past_date,validation_error
+882,AddVisitValidation_Case_882,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-23,Old visit validation 882,date,future_date,old_date,validation_error
+883,AddVisitValidation_Case_883,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-24,,description,required,blank_description,validation_error
+884,AddVisitValidation_Case_884,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-25,   ,description,required,spaces_description,validation_error
+885,AddVisitValidation_Case_885,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-25,Past visit validation 885,date,future_date,past_date,validation_error
+886,AddVisitValidation_Case_886,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-27,Old visit validation 886,date,future_date,old_date,validation_error
+887,AddVisitValidation_Case_887,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-28,,description,required,blank_description,validation_error
+888,AddVisitValidation_Case_888,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-03-29,   ,description,required,spaces_description,validation_error
+889,AddVisitValidation_Case_889,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-03-29,Past visit validation 889,date,future_date,past_date,validation_error
+890,AddVisitValidation_Case_890,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-03-31,Old visit validation 890,date,future_date,old_date,validation_error
+891,AddVisitValidation_Case_891,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-01,,description,required,blank_description,validation_error
+892,AddVisitValidation_Case_892,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-02,   ,description,required,spaces_description,validation_error
+893,AddVisitValidation_Case_893,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-04-02,Past visit validation 893,date,future_date,past_date,validation_error
+894,AddVisitValidation_Case_894,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-04-04,Old visit validation 894,date,future_date,old_date,validation_error
+895,AddVisitValidation_Case_895,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-05,,description,required,blank_description,validation_error
+896,AddVisitValidation_Case_896,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-06,   ,description,required,spaces_description,validation_error
+897,AddVisitValidation_Case_897,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2020-04-06,Past visit validation 897,date,future_date,past_date,validation_error
+898,AddVisitValidation_Case_898,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2025-04-08,Old visit validation 898,date,future_date,old_date,validation_error
+899,AddVisitValidation_Case_899,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-09,,description,required,blank_description,validation_error
+900,AddVisitValidation_Case_900,http://localhost:8080/owners/1/pets/1/visits/new,1,1,2035-04-10,   ,description,required,spaces_description,validation_error
