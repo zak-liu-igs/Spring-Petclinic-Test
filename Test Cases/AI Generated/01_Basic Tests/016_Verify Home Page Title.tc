@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verifies the Spring Petclinic home page title and main navigation labels. Updated to use Katalon test case variables instead of an undefined testData object.</description>
+   <description>Verifies the Spring Petclinic home page title and main navigation labels. Updated to compare navigation labels case-insensitively because the application renders labels such as HOME in uppercase.</description>
    <name>016_Verify Home Page Title</name>
    <tag>GenAI</tag>
    <comment></comment>
@@ -10,42 +10,42 @@
    <variable>
       <defaultValue>'http://localhost:8080'</defaultValue>
       <description>Spring Petclinic application URL</description>
-      <id>e6af2065-abe7-41f7-8a0c-783b2895789c</id>
+      <id>1c732d6e-156a-4455-8269-24e7c41c0339</id>
       <masked>false</masked>
       <name>url</name>
    </variable>
    <variable>
       <defaultValue>'PetClinic :: a Spring Framework demonstration'</defaultValue>
       <description>Expected browser title for the home page</description>
-      <id>845080f3-2931-4af8-81ed-7b88e1c3ac95</id>
+      <id>2699c000-4086-4423-8597-bdd98c08d512</id>
       <masked>false</masked>
       <name>expectedTitle</name>
    </variable>
    <variable>
       <defaultValue>'Home'</defaultValue>
-      <description>Expected Home navigation label</description>
-      <id>38ed3146-9cec-4555-9a52-a15694462e2f</id>
+      <description>Expected Home navigation label; compared case-insensitively</description>
+      <id>112fef0e-b3cc-428f-9c7e-8308d2d23780</id>
       <masked>false</masked>
       <name>expectedHomeText</name>
    </variable>
    <variable>
       <defaultValue>'Find owners'</defaultValue>
-      <description>Expected Find Owners navigation label</description>
-      <id>13ecd1f0-badc-4a26-a1b6-da141c395216</id>
+      <description>Expected Find Owners navigation label; compared case-insensitively</description>
+      <id>2febeaa2-ef1a-4343-90dc-b2938e288eb2</id>
       <masked>false</masked>
       <name>expectedFindOwnersText</name>
    </variable>
    <variable>
       <defaultValue>'Veterinarians'</defaultValue>
-      <description>Expected Veterinarians navigation label</description>
-      <id>43d1e1d5-534c-44de-93b5-944f5d8b51da</id>
+      <description>Expected Veterinarians navigation label; compared case-insensitively</description>
+      <id>ee4e4343-d3e6-4b3d-a22e-5a30350be219</id>
       <masked>false</masked>
       <name>expectedVeterinariansText</name>
    </variable>
    <variable>
       <defaultValue>'016_Verify Home Page Title'</defaultValue>
       <description>Test case name for logging</description>
-      <id>f3343a26-20c2-4573-91c2-f71f999a2eed</id>
+      <id>595d7487-ef12-4ce5-b419-6e6d6a87a99c</id>
       <masked>false</masked>
       <name>caseName</name>
    </variable>

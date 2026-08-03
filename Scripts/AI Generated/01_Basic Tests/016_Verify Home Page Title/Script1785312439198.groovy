@@ -1,5 +1,7 @@
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 String baseUrl = url?.trim() ?: 'http://localhost:8080'
@@ -9,15 +11,23 @@ String findOwnersText = expectedFindOwnersText?.trim() ?: 'Find owners'
 String veterinariansText = expectedVeterinariansText?.trim() ?: 'Veterinarians'
 String executedCaseName = caseName?.trim() ?: '016_Verify Home Page Title'
 
+void verifyTextIgnoringCase(TestObject object, String expected, String label) {
+    String actual = WebUI.getText(object).trim()
+    if (!actual.equalsIgnoreCase(expected)) {
+        KeywordUtil.markFailed("${label} text mismatch. Expected '${expected}' ignoring case, actual '${actual}'.")
+    }
+}
+
 try {
     WebUI.openBrowser('')
     WebUI.navigateToUrl(baseUrl)
     WebUI.waitForPageLoad(30)
 
     WebUI.verifyMatch(WebUI.getWindowTitle(), title, false)
-    WebUI.verifyElementText(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Home'), homeText)
-    WebUI.verifyElementText(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Find Owners'), findOwnersText)
-    WebUI.verifyElementText(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Veterinarians'), veterinariansText)
+
+    verifyTextIgnoringCase(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Home'), homeText, 'Home navigation')
+    verifyTextIgnoringCase(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Find Owners'), findOwnersText, 'Find Owners navigation')
+    verifyTextIgnoringCase(findTestObject('Page_PetClinic  a Spring Framework demonstration/span_Veterinarians'), veterinariansText, 'Veterinarians navigation')
 
     WebUI.comment("Executed ${executedCaseName}")
 } finally {
